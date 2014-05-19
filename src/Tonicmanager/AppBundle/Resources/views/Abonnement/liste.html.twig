@@ -1,0 +1,15 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% block NasApp_body %}	
+			<h3>Vos abonnements : </h3>
+			<div>
+				{% for abonnement in abonnements %}
+					{{abonnement.type}}<br>
+				{% endfor %}
+			</div>
+	{% endblock %}
+{% endblock %}

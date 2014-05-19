@@ -1,0 +1,14 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% block NasApp_body %}	
+			<h3>Nouvel abonnement</h3>
+			 <form method="post" {{ form_enctype(form) }}>
+			 {{ form_widget(form) }}
+			 <input type="submit" class="btn btn-primary" />
+			 </form>
+	{% endblock %}
+{% endblock %}

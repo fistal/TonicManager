@@ -8,4 +8,10 @@ tonicmanagerAppBundle_ajoutClient:
 tonicmanagerAppBundle_listeClient:
     path: /listeClient
     defaults: { _controller: TonicmanagerAppBundle:Client:liste }
+tonicmanagerAppBundle_ajoutAbonnement:
+    path: /ajoutAbonnement
+    defaults: { _controller: TonicmanagerAppBundle:Abonnement:ajout }
+tonicmanagerAppBundle_listeAbonnement:
+    path: /listeAbonnement
+    defaults: { _controller: TonicmanagerAppBundle:Abonnement:liste }
 
