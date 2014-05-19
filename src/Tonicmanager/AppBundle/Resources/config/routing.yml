@@ -1,0 +1,8 @@
+# src/Sdz/BlogBundle/Resources/config/routing.yml
+tonicmanagerAppBundle_homepage:
+    path: /hello/{name}
+    defaults: { _controller: TonicmanagerAppBundle:Default:index }
+tonicmanagerAppBundle_ajoutClient:
+    path: /nouveauClient
+    defaults: { _controller: TonicmanagerAppBundle:Client:ajout }
+
