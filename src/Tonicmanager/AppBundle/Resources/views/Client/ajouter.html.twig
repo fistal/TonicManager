@@ -5,12 +5,10 @@
 
 {% block body %}
 	{% block NasApp_body %}	
-			<h3>Formulaire d'article</h3>
-			<div class="well">
+			<h3>Nouveau client</h3>
 			 <form method="post" {{ form_enctype(form) }}>
 			 {{ form_widget(form) }}
 			 <input type="submit" class="btn btn-primary" />
 			 </form>
-			</div>
 	{% endblock %}
 {% endblock %}

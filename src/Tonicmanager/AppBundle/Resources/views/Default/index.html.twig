@@ -1,5 +1,6 @@
-{% extends "TonicmanagerAppBundle::layout.html.twig" %}
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
 
-{% block NasApp_body %}
-Hello {{ name }}!
-{%endblock%}
+

@@ -1,0 +1,15 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% block NasApp_body %}	
+			<h3>Vos clients : </h3>
+			<div>
+				{% for client in clients %}
+					{{client.nom}}<br>
+				{% endfor %}
+			</div>
+	{% endblock %}
+{% endblock %}

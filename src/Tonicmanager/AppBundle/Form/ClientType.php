@@ -18,7 +18,7 @@ class ClientType extends AbstractType
             ->add('nom', 'text')
             ->add('prenom', 'text')
             ->add('email', 'text')
-            ->add('dateNaissance', 'text')
+            ->add('dateNaissance', 'date')
             ->add('adresse', 'text')
             ->add('ville', 'text')
             ->add('cp', 'text')

@@ -1,7 +1,3 @@
-TonicmanagerApp:
-    resource: "@TonicmanagerAppBundle/Controller/"
-    type:     annotation
-    prefix:   /
 tonicmanagerAppBundle:
  resource: "@TonicmanagerAppBundle/Resources/config/routing.yml"
  prefix: /
