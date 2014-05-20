@@ -5,122 +5,137 @@
 
 {% block body %}
 	{% block NasApp_body %}	
-	
-	
-
-
-
-
-	
-	
-	
-	
 			<h3>Nouveau contrat</h3>
 			 <form method="post" {{ form_enctype(form) }} class="form-horizontal">
 			 
 			 
 			 
 			 
+<div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Informations client</h3>
+      </div>
+      <div class="panel-body">        
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">Nom</span>
+					{{ form_widget(form.client.nom,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">
+						prénom
+					</span>
+					{{ form_widget(form.client.prenom,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">
+						Date de naissance
+					</span>
+					{{ form_widget(form.client.dateNaissance,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">E-mail</span>
+					{{ form_widget(form.client.email,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>	
+		</div>
+		<br>
+		<div class="row">
+
+			<div class="col-xs-4">
+				<div class="input-group">
+					<span class="input-group-addon">Adresse</span>
+					{{ form_widget(form.client.adresse,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>	
+			<div class="col-xs-4">
+				<div class="input-group">
+					<span class="input-group-addon">Ville</span>
+					{{ form_widget(form.client.ville,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>
+			<div class="col-xs-4">
+				<div class="input-group">
+					<span class="input-group-addon">Code postal</span>
+					{{ form_widget(form.client.cp,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>	
+		</div>				
+      </div>
+</div>		 
 			 
-			 
-			 
-			 
-			 
- <div class="row">
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Nom</span>
-			{{ form_widget(form.client.nom,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">
-				prénom
-			</span>
-			{{ form_widget(form.client.prenom,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">
-				Date de naissance
-			</span>
-			{{ form_widget(form.client.dateNaissance,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-</div>
-<br>
-<div class="row">
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">E-mail</span>
-			{{ form_widget(form.client.email,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Adresse</span>
-			{{ form_widget(form.client.adresse,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>	
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Ville</span>
-			{{ form_widget(form.client.ville,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-</div>
-<br>
-<div class="row">
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Code postal</span>
-			{{ form_widget(form.client.cp,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-</div>
-<br>
-<div class="row">
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Client doit</span>
-			{{ form_widget(form.clientDoit,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Incident de paiement</span>
-			{{ form_widget(form.incidentPaiement,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-	<div class="col-xs-4">
-		<div class="input-group">
-			<span class="input-group-addon">Mode de paiement</span>
-			{{ form_widget(form.modePaiement,  { 'attr': {'class': 'form-control'}}) }}
-		</div>
-	</div>
-</div>
-<br>
-			 
-				<div class="form-group">
-					<label for="username" class="col-sm-3 control-label">droitEntree : </label>
-					<div class="col-sm-3">
-						{{ form_widget(form.droitEntree,  { 'attr': {'class': 'form-control'}}) }}
+
+<div class="panel panel-primary">
+      <div class="panel-heading">
+        <h3 class="panel-title">Informations abonnement</h3>
+      </div>
+      <div class="panel-body">				
+        		<div class="row">
+					<div class="col-xs-4">
+						<div class="input-group">
+							<span class="input-group-addon">Abonnement</span>
+							{{ form_widget(form.abonnement,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="input-group">
+							<span class="input-group-addon">Date de debut</span>
+							{{ form_widget(form.dateStart,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<div class="input-group">
+							<span class="input-group-addon">Date de fin</span>
+							{{ form_widget(form.dateEnd,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="username" class="col-sm-3 control-label">Date de début du contrat : </label>
-					<div class="col-sm-3">
-						{{ form_widget(form.dateStart) }}
+				<br>
+        		<div class="row">
+					<div class="col-xs-3">
+						<div class="input-group">
+							<span class="input-group-addon">Client doit</span>
+							{{ form_widget(form.clientDoit,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="input-group">
+							<span class="input-group-addon">Incident de paiement</span>
+							{{ form_widget(form.incidentPaiement,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="input-group">
+							<span class="input-group-addon">Mode de paiement</span>
+							{{ form_widget(form.modePaiement,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
+					</div>
+					<div class="col-xs-3">
+						<div class="input-group">
+							<span class="input-group-addon">Droit entrée</span>
+							{{ form_widget(form.droitEntree,  { 'attr': {'class': 'form-control'}}) }}
+						</div>
 					</div>
 				</div>
-				<div class="form-group">
-					<label for="username" class="col-sm-3 control-label">Date de fin de contrat : </label>
-					<div class="col-sm-3">
-						{{ form_widget(form.dateEnd) }}
-					</div>
-				</div>
+      </div>
+</div>			 
+			 
+			 
+ 
+<br>
+
+<br>
+			 
 				<div class="form-group">
 					<label for="username" class="col-sm-3 control-label">Photo : </label>
 					<div class="col-sm-3">
@@ -136,7 +151,7 @@
 				<div class="form-group">
 					<label for="username" class="col-sm-3 control-label">Abonnement : </label>
 					<div class="col-sm-3">
-						{{ form_widget(form.abonnement,  { 'attr': {'class': 'form-control'}}) }}
+						
 					</div>
 				</div>
 

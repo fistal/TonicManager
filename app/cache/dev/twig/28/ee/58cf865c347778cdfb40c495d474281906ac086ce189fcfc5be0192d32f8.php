@@ -47,170 +47,188 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
     public function block_NasApp_body($context, array $blocks = array())
     {
         echo "\t
-\t
-\t
-
-
-
-
-\t
-\t
-\t
-\t
 \t\t\t<h3>Nouveau contrat</h3>
 \t\t\t <form method=\"post\" ";
-        // line 19
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'enctype');
+        // line 9
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo " class=\"form-horizontal\">
 \t\t\t 
 \t\t\t 
 \t\t\t 
 \t\t\t 
-\t\t\t 
-\t\t\t 
-\t\t\t 
-\t\t\t 
-\t\t\t 
- <div class=\"row\">
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Nom</span>
-\t\t\t";
-        // line 33
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "nom"), 'widget', array("attr" => array("class" => "form-control")));
+<div class=\"panel panel-primary\">
+      <div class=\"panel-heading\">
+        <h3 class=\"panel-title\">Informations client</h3>
+      </div>
+      <div class=\"panel-body\">        
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-xs-6\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">Nom</span>
+\t\t\t\t\t";
+        // line 23
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "nom"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
-\t\t</div>
-\t</div>
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">
-\t\t\t\tprénom
-\t\t\t</span>
-\t\t\t";
-        // line 41
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "prenom"), 'widget', array("attr" => array("class" => "form-control")));
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-xs-6\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">
+\t\t\t\t\t\tprénom
+\t\t\t\t\t</span>
+\t\t\t\t\t";
+        // line 31
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "prenom"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
+\t\t\t\t</div>
+\t\t\t</div>
 \t\t</div>
-\t</div>
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">
-\t\t\t\tDate de naissance
-\t\t\t</span>
-\t\t\t";
-        // line 49
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "dateNaissance"), 'widget', array("attr" => array("class" => "form-control")));
+\t\t<br>
+\t\t<div class=\"row\">
+\t\t\t<div class=\"col-xs-6\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">
+\t\t\t\t\t\tDate de naissance
+\t\t\t\t\t</span>
+\t\t\t\t\t";
+        // line 42
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "dateNaissance"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-xs-6\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">E-mail</span>
+\t\t\t\t\t";
+        // line 48
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "email"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t</div>
+\t\t\t</div>\t
 \t\t</div>
-\t</div>
-</div>
-<br>
-<div class=\"row\">
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">E-mail</span>
-\t\t\t";
+\t\t<br>
+\t\t<div class=\"row\">
+
+\t\t\t<div class=\"col-xs-4\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">Adresse</span>
+\t\t\t\t\t";
         // line 58
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "email"), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "adresse"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
-\t\t</div>
-\t</div>
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Adresse</span>
-\t\t\t";
+\t\t\t\t</div>
+\t\t\t</div>\t
+\t\t\t<div class=\"col-xs-4\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">Ville</span>
+\t\t\t\t\t";
         // line 64
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "adresse"), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "ville"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
-\t\t</div>
-\t</div>\t
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Ville</span>
-\t\t\t";
+\t\t\t\t</div>
+\t\t\t</div>
+\t\t\t<div class=\"col-xs-4\">
+\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t<span class=\"input-group-addon\">Code postal</span>
+\t\t\t\t\t";
         // line 70
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "ville"), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "client"), "cp"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
-\t\t</div>
-\t</div>
-</div>
+\t\t\t\t</div>
+\t\t\t</div>\t
+\t\t</div>\t\t\t\t
+      </div>
+</div>\t\t 
+\t\t\t 
+
+<div class=\"panel panel-primary\">
+      <div class=\"panel-heading\">
+        <h3 class=\"panel-title\">Informations abonnement</h3>
+      </div>
+      <div class=\"panel-body\">\t\t\t\t
+        \t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-xs-4\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Abonnement</span>
+\t\t\t\t\t\t\t";
+        // line 87
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "abonnement"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-xs-4\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Date de debut</span>
+\t\t\t\t\t\t\t";
+        // line 93
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateStart"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-xs-4\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Date de fin</span>
+\t\t\t\t\t\t\t";
+        // line 99
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "dateEnd"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+\t\t\t\t<br>
+        \t\t<div class=\"row\">
+\t\t\t\t\t<div class=\"col-xs-3\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Client doit</span>
+\t\t\t\t\t\t\t";
+        // line 108
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "clientDoit"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-xs-3\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Incident de paiement</span>
+\t\t\t\t\t\t\t";
+        // line 114
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "incidentPaiement"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-xs-3\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Mode de paiement</span>
+\t\t\t\t\t\t\t";
+        // line 120
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "modePaiement"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t\t<div class=\"col-xs-3\">
+\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t<span class=\"input-group-addon\">Droit entrée</span>
+\t\t\t\t\t\t\t";
+        // line 126
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "droitEntree"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t</div>
+\t\t\t\t\t</div>
+\t\t\t\t</div>
+      </div>
+</div>\t\t\t 
+\t\t\t 
+\t\t\t 
+ 
 <br>
-<div class=\"row\">
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Code postal</span>
-\t\t\t";
-        // line 79
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "client"), "cp"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t</div>
-\t</div>
-</div>
-<br>
-<div class=\"row\">
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Client doit</span>
-\t\t\t";
-        // line 88
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "clientDoit"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t</div>
-\t</div>
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Incident de paiement</span>
-\t\t\t";
-        // line 94
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "incidentPaiement"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t</div>
-\t</div>
-\t<div class=\"col-xs-4\">
-\t\t<div class=\"input-group\">
-\t\t\t<span class=\"input-group-addon\">Mode de paiement</span>
-\t\t\t";
-        // line 100
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "modePaiement"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t</div>
-\t</div>
-</div>
+
 <br>
 \t\t\t 
-\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t<label for=\"username\" class=\"col-sm-3 control-label\">droitEntree : </label>
-\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t";
-        // line 109
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "droitEntree"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t<label for=\"username\" class=\"col-sm-3 control-label\">Date de début du contrat : </label>
-\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t";
-        // line 115
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "dateStart"), 'widget');
-        echo "
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t\t<div class=\"form-group\">
-\t\t\t\t\t<label for=\"username\" class=\"col-sm-3 control-label\">Date de fin de contrat : </label>
-\t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t";
-        // line 121
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "dateEnd"), 'widget');
-        echo "
-\t\t\t\t\t</div>
-\t\t\t\t</div>
 \t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t<label for=\"username\" class=\"col-sm-3 control-label\">Photo : </label>
 \t\t\t\t\t<div class=\"col-sm-3\">
 \t\t\t\t\t\t";
-        // line 127
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "photo"), 'widget', array("attr" => array("class" => "form-control")));
+        // line 142
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "photo"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
@@ -218,25 +236,22 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t\t<label for=\"username\" class=\"col-sm-3 control-label\">Commentaire : </label>
 \t\t\t\t\t<div class=\"col-sm-3\">
 \t\t\t\t\t\t";
-        // line 133
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "commentaire"), 'widget', array("attr" => array("class" => "form-control")));
+        // line 148
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "commentaire"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t\t<div class=\"form-group\">
 \t\t\t\t\t<label for=\"username\" class=\"col-sm-3 control-label\">Abonnement : </label>
 \t\t\t\t\t<div class=\"col-sm-3\">
-\t\t\t\t\t\t";
-        // line 139
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "abonnement"), 'widget', array("attr" => array("class" => "form-control")));
-        echo "
+\t\t\t\t\t\t
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 
 \t\t\t\t\t
 \t\t\t ";
-        // line 144
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'rest');
+        // line 159
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
         echo "
 \t\t\t 
 \t\t\t  <div class=\"form-group\">
@@ -261,6 +276,6 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 
     public function getDebugInfo()
     {
-        return array (  239 => 144,  231 => 139,  222 => 133,  213 => 127,  204 => 121,  195 => 115,  186 => 109,  174 => 100,  165 => 94,  156 => 88,  144 => 79,  132 => 70,  123 => 64,  114 => 58,  102 => 49,  91 => 41,  80 => 33,  63 => 19,  43 => 7,  40 => 6,  33 => 3,  30 => 2,);
+        return array (  254 => 159,  240 => 148,  231 => 142,  212 => 126,  203 => 120,  194 => 114,  185 => 108,  173 => 99,  164 => 93,  155 => 87,  135 => 70,  126 => 64,  117 => 58,  104 => 48,  95 => 42,  81 => 31,  70 => 23,  53 => 9,  43 => 7,  40 => 6,  33 => 3,  30 => 2,);
     }
 }

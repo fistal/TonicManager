@@ -303,7 +303,7 @@ class __TwigTemplate_fda0f6aa100ee01d3e9c197cba46bea705c1b0385116cb106ce1dff2649
 /***** Override the setting when the toolbar is on the top *****/
 ";
         // line 286
-        if (($this->getContext($context, "position") == "top")) {
+        if (((isset($context["position"]) ? $context["position"] : $this->getContext($context, "position")) == "top")) {
             // line 287
             echo "    .sf-minitoolbar {
         top: 0;
@@ -350,7 +350,7 @@ class __TwigTemplate_fda0f6aa100ee01d3e9c197cba46bea705c1b0385116cb106ce1dff2649
         echo "
 ";
         // line 328
-        if ((!$this->getContext($context, "floatable"))) {
+        if ((!(isset($context["floatable"]) ? $context["floatable"] : $this->getContext($context, "floatable")))) {
             // line 329
             echo "    .sf-toolbarreset {
         position: static;

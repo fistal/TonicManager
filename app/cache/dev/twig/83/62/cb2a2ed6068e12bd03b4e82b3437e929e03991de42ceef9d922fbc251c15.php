@@ -55,11 +55,11 @@ class __TwigTemplate_8362cb2a2ed6068e12bd03b4e82b3437e929e03991de42ceef9d922fbc2
 \t\t\t\t";
         // line 10
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getContext($context, "abonnements"));
+        $context['_seq'] = twig_ensure_traversable((isset($context["abonnements"]) ? $context["abonnements"] : $this->getContext($context, "abonnements")));
         foreach ($context['_seq'] as $context["_key"] => $context["abonnement"]) {
             // line 11
             echo "\t\t\t\t\t";
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "abonnement"), "type"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["abonnement"]) ? $context["abonnement"] : $this->getContext($context, "abonnement")), "type"), "html", null, true);
             echo "<br>
 \t\t\t\t";
         }

@@ -75,14 +75,10 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
         // line 83
-        echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutClient");
-        echo "\">Prospect</a></li>
+        echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutContrat");
+        echo "\">Nouveau clients</a></li>
                 <li><a href=\"";
         // line 84
-        echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutContrat");
-        echo "\">Nouveau contrat</a></li>
-                <li><a href=\"";
-        // line 85
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeClient");
         echo "\">Liste des clients</a></li>
                 <li><a href=\"#\">Rechercher un client</a></li>
@@ -92,11 +88,11 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Abonnement <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 92
+        // line 91
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutAbonnement");
         echo "\">Ajouter un abonnement</a></li>
                 <li><a href=\"";
-        // line 93
+        // line 92
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeAbonnement");
         echo "\">Vos abonnements</a></li>
               </ul>
@@ -105,11 +101,11 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Option <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 99
+        // line 98
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutOption");
         echo "\">Ajouter une option</a></li>
                 <li><a href=\"";
-        // line 100
+        // line 99
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeOption");
         echo "\">Vos options</a></li>
               </ul>
@@ -118,20 +114,23 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Outils <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 106
+        // line 105
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutClient");
         echo "\">Fréquentations</a></li>
                 <li><a href=\"";
-        // line 107
+        // line 106
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutClient");
         echo "\">Statistique</a></li>
               </ul>
             </li>\t\t\t
           </ul>
+\t\t  <form class=\"navbar-form navbar-right\">
+            <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">
+          </form>
 \t\t\t";
-        // line 111
+        // line 113
         $this->displayBlock('printDevis', $context, $blocks);
-        // line 114
+        // line 116
         echo "        </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -141,18 +140,18 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
   
 \t  <div class=\"container\">
 \t\t";
-        // line 122
-        $this->displayBlock('titleAction', $context, $blocks);
         // line 124
-        echo "\t\t\t";
-        // line 125
-        echo "\t\t\t";
+        $this->displayBlock('titleAction', $context, $blocks);
         // line 126
         echo "\t\t\t";
         // line 127
+        echo "\t\t\t";
+        // line 128
+        echo "\t\t\t";
+        // line 129
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 129
+        // line 131
         echo "\t  </div>
 \t  
 
@@ -271,25 +270,25 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 \t";
     }
 
-    // line 111
+    // line 113
     public function block_printDevis($context, array $blocks = array())
     {
-        // line 112
+        // line 114
         echo "\t\t
 \t\t\t";
     }
 
-    // line 122
+    // line 124
     public function block_titleAction($context, array $blocks = array())
     {
-        // line 123
+        // line 125
         echo "\t\t";
     }
 
-    // line 127
+    // line 129
     public function block_body($context, array $blocks = array())
     {
-        // line 128
+        // line 130
         echo "\t\t";
     }
 
@@ -305,6 +304,6 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 
     public function getDebugInfo()
     {
-        return array (  293 => 128,  290 => 127,  286 => 123,  283 => 122,  278 => 112,  275 => 111,  242 => 31,  237 => 29,  232 => 27,  228 => 26,  224 => 25,  220 => 24,  217 => 23,  214 => 22,  208 => 19,  204 => 18,  200 => 17,  196 => 16,  191 => 15,  188 => 14,  182 => 12,  156 => 129,  153 => 127,  151 => 126,  149 => 125,  147 => 124,  145 => 122,  135 => 114,  133 => 111,  126 => 107,  122 => 106,  113 => 100,  109 => 99,  100 => 93,  96 => 92,  86 => 85,  82 => 84,  78 => 83,  70 => 78,  50 => 60,  48 => 22,  45 => 21,  43 => 14,  38 => 12,  25 => 1,);
+        return array (  292 => 130,  289 => 129,  285 => 125,  282 => 124,  277 => 114,  274 => 113,  241 => 31,  236 => 29,  231 => 27,  227 => 26,  223 => 25,  219 => 24,  216 => 23,  213 => 22,  207 => 19,  203 => 18,  199 => 17,  195 => 16,  190 => 15,  187 => 14,  181 => 12,  155 => 131,  152 => 129,  150 => 128,  148 => 127,  146 => 126,  144 => 124,  134 => 116,  132 => 113,  122 => 106,  118 => 105,  109 => 99,  105 => 98,  96 => 92,  92 => 91,  82 => 84,  78 => 83,  70 => 78,  50 => 60,  48 => 22,  45 => 21,  43 => 14,  38 => 12,  25 => 1,);
     }
 }

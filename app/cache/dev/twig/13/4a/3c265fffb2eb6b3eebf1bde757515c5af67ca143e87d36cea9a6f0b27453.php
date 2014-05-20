@@ -50,11 +50,11 @@ class __TwigTemplate_134a3c265fffb2eb6b3eebf1bde757515c5af67ca143e87d36cea9a6f0b
 \t\t\t<h3>Nouvel abonnement</h3>
 \t\t\t <form method=\"post\" ";
         // line 9
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'enctype');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
         echo ">
 \t\t\t ";
         // line 10
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'widget');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
 \t\t\t <input type=\"submit\" class=\"btn btn-primary\" />
 \t\t\t </form>
