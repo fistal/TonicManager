@@ -1,0 +1,15 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% block NasApp_body %}	
+			<h3>Vos options : <a href="{{path('tonicmanagerAppBundle_ajoutOption')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a> </h3>
+			<div>
+				{% for option in options %}
+					{{option.libelle}}<br>
+				{% endfor %}
+			</div>
+	{% endblock %}
+{% endblock %}

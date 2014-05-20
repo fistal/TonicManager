@@ -1,0 +1,154 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% block NasApp_body %}	
+	
+	
+
+
+
+
+	
+	
+	
+	
+			<h3>Nouveau contrat</h3>
+			 <form method="post" {{ form_enctype(form) }} class="form-horizontal">
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+			 
+ <div class="row">
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Nom</span>
+			{{ form_widget(form.client.nom,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">
+				prénom
+			</span>
+			{{ form_widget(form.client.prenom,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">
+				Date de naissance
+			</span>
+			{{ form_widget(form.client.dateNaissance,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">E-mail</span>
+			{{ form_widget(form.client.email,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Adresse</span>
+			{{ form_widget(form.client.adresse,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>	
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Ville</span>
+			{{ form_widget(form.client.ville,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Code postal</span>
+			{{ form_widget(form.client.cp,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+</div>
+<br>
+<div class="row">
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Client doit</span>
+			{{ form_widget(form.clientDoit,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Incident de paiement</span>
+			{{ form_widget(form.incidentPaiement,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+	<div class="col-xs-4">
+		<div class="input-group">
+			<span class="input-group-addon">Mode de paiement</span>
+			{{ form_widget(form.modePaiement,  { 'attr': {'class': 'form-control'}}) }}
+		</div>
+	</div>
+</div>
+<br>
+			 
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">droitEntree : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.droitEntree,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Date de début du contrat : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.dateStart) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Date de fin de contrat : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.dateEnd) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Photo : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.photo,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Commentaire : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.commentaire,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Abonnement : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.abonnement,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+
+					
+			 {{ form_rest(form) }}
+			 
+			  <div class="form-group">
+				<div class="col-sm-offset-4 col-sm-10">
+				  <input type="submit" class="btn btn-primary" value="Enregistrer" class="btn btn-default"/>
+				</div>
+			  </div> 
+			  
+			 </form>
+	{% endblock %}
+{% endblock %}
