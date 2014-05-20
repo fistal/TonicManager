@@ -6,9 +6,108 @@
 {% block body %}
 	{% block NasApp_body %}	
 			<h3>Nouveau client</h3>
-			 <form method="post" {{ form_enctype(form) }}>
-			 {{ form_widget(form) }}
-			 <input type="submit" class="btn btn-primary" />
+			 <form method="post" {{ form_enctype(form) }} class="form-horizontal">
+			 
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Nom : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.nom,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Prénom : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.prenom,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Date de naissance : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.dateNaissance,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">E-mail : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.email,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Adresse : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.adresse,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Ville : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.ville,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Code postal : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.cp,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Client doit : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.clientDoit,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Incident de paiement : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.incidentPaiement,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Mode paiement : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.modePaiement,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">droitEntree : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.droitEntree,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Date de début du contrat : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.dateStart,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Date de fin de contrat : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.dateEnd,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Photo : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.photo,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="username" class="col-sm-3 control-label">Commentaire : </label>
+					<div class="col-sm-3">
+						{{ form_widget(form.contrat.commentaire,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
+				</div>
+
+					
+			 {{ form_rest(form) }}
+			 
+			  <div class="form-group">
+				<div class="col-sm-offset-4 col-sm-10">
+				  <input type="submit" class="btn btn-primary" value="Enregistrer" class="btn btn-default"/>
+				</div>
+			  </div> 
+			  
 			 </form>
 	{% endblock %}
 {% endblock %}

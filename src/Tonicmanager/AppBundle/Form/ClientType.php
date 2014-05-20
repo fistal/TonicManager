@@ -18,10 +18,10 @@ class ClientType extends AbstractType
             ->add('nom', 'text')
             ->add('prenom', 'text')
             ->add('email', 'text')
-            ->add('dateNaissance', 'date')
+            ->add('dateNaissance', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
             ->add('adresse', 'text')
             ->add('ville', 'text')
-            ->add('cp', 'text')
+            ->add('cp', 'text')			
         ;
     }
     

@@ -12,16 +12,16 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Contrat
 {
+
+	/**
+	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Contrat",cascade={"persist"})
+	 */
+	private $client;
 	/**
 	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Abonnement")
 	 * @ORM\JoinColumn(nullable=false)
 	 */
 	private $abonnement;
-	/**
-	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Client")
-	 * @ORM\JoinColumn(nullable=false)
-	 */
-	private $client;
 	/**
 	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Supp")
 	 * @ORM\JoinColumn(nullable=false)
@@ -342,25 +342,25 @@ class Contrat
     }
 
     /**
-     * Set client
+     * Set Supp
      *
-     * @param \Tonicmanager\AppBundle\Entity\Client $client
+     * @param \Tonicmanager\AppBundle\Entity\Supp $supp
      * @return Contrat
      */
-    public function setClient(\Tonicmanager\AppBundle\Entity\Client $client)
+    public function setSupp(\Tonicmanager\AppBundle\Entity\Supp $supp)
     {
-        $this->client = $client;
+        $this->Supp = $supp;
     
         return $this;
     }
 
     /**
-     * Get client
+     * Get Supp
      *
-     * @return \Tonicmanager\AppBundle\Entity\Client 
+     * @return \Tonicmanager\AppBundle\Entity\Supp 
      */
-    public function getClient()
+    public function getSupp()
     {
-        return $this->client;
+        return $this->Supp;
     }
 }

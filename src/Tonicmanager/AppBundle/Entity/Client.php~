@@ -12,6 +12,12 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Client
 {
+
+	/**
+	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Contrat",cascade={"persist"})
+	 */
+	private $contrat;	
+
     /**
      * @var integer
      *

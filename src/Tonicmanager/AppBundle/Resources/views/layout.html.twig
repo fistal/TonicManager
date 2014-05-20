@@ -6,35 +6,39 @@
 {% block body %}
 	{% block NasApp_body %}	
 		<div class="row">
-			<div class="col-md-7 col-md-offset-3">
-				<div class="panel panel-default">
-			  <div class="panel-heading">
-				<h3 class="panel-title">Tableau de bord</h3>
-			  </div>
-			  <div class="panel-body">
-				<div class="btn-group btn-group-justified ">
-				  <div class="btn-group btn-group-lg">
-					<a class="btn btn-info" href="#">
-						<span class="glyphicon glyphicon-plus" style="font-size:30px;"></span><br>
-						<span class="glyphicon-class hidden-xs">Ajouter un client</span>
-					</a>
-				  </div>
-				  <div class="btn-group btn-group-lg">
-					<a href="#" class="btn btn-info">
-						<span class="glyphicon glyphicon-list" style="font-size:30px;"></span><br>
-						<span class="glyphicon-class hidden-xs">Liste des clients</span>
-					</a>
-				  </div>
-				  <div class="btn-group btn-group-lg">
-					<a href="#" class="btn btn-info">
-						<span class="glyphicon glyphicon-search" style="font-size:30px;"></span><br>
-						<span class="glyphicon-class hidden-xs">Rechercher un clients</span>
-					</a>
-				  </div>
-				</div>
-			  </div>
+			<div class="col-md-3">
+					{{ render(controller("TonicmanagerAppBundle:Default:scanCarte")) }}
 			</div>
+			<div class="col-md-8">
+					{{ render(controller("TonicmanagerAppBundle:Default:rechercheClient")) }}
 			</div>
-		</div>	
+		</div>
+
+		<div class="row">
+			<div class="col-md-3">
+				{{ render(controller("TonicmanagerAppBundle:Default:consultation")) }}
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Statistique</h3>
+					</div>
+					<div class="panel-body">
+						<button type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-stats"></span></button>
+					</div>
+				</div>	
+			</div>
+			<div class="col-md-4">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Fréquentations</h3>
+					</div>
+					<div class="panel-body">
+						<button type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-transfer"></span></button>
+					</div>
+				</div>	
+			</div>
+
+		</div>
 	{% endblock %}
 {% endblock %}

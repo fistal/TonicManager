@@ -11,7 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="Tonicmanager\AppBundle\Entity\ClientRepository")
  */
 class Client
-{
+{	
     /**
      * @var integer
      *
@@ -241,4 +241,5 @@ class Client
     {
         return $this->cp;
     }
+
 }

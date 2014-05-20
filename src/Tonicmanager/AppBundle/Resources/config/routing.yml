@@ -2,6 +2,15 @@
 tonicmanagerAppBundle_homepage:
     path: /
     defaults: { _controller: TonicmanagerAppBundle:Default:index }
+tonicmanagerAppBundle_scanClient:
+    path: /scanCarte
+    defaults: { _controller: TonicmanagerAppBundle:Default:scanCarte }
+tonicmanagerAppBundle_rechercheClient:
+    path: /rechercheClient
+    defaults: { _controller: TonicmanagerAppBundle:Default:rechercheClient }
+tonicmanagerAppBundle_consultation:
+    path: /ConsultationClient
+    defaults: { _controller: TonicmanagerAppBundle:Default:consultation }
 tonicmanagerAppBundle_ajoutClient:
     path: /nouveauClient
     defaults: { _controller: TonicmanagerAppBundle:Client:ajout }
@@ -14,4 +23,13 @@ tonicmanagerAppBundle_ajoutAbonnement:
 tonicmanagerAppBundle_listeAbonnement:
     path: /listeAbonnement
     defaults: { _controller: TonicmanagerAppBundle:Abonnement:liste }
+tonicmanagerAppBundle_ajoutOption:
+    path: /ajoutOption
+    defaults: { _controller: TonicmanagerAppBundle:Supp:ajout }
+tonicmanagerAppBundle_listeOption:
+    path: /listeOption
+    defaults: { _controller: TonicmanagerAppBundle:Supp:liste }
+tonicmanagerAppBundle_ajoutContrat:
+    path: /ajoutContrat
+    defaults: { _controller: TonicmanagerAppBundle:Contrat:ajout }
 

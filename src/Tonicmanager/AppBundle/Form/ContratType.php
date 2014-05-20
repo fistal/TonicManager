@@ -15,15 +15,20 @@ class ContratType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('etat')
-            ->add('clientDoit')
-            ->add('incidentPaiement')
-            ->add('modePaiement')
-            ->add('droitEntree')
-            ->add('dateStart')
-            ->add('dateEnd')
-            ->add('photo')
-            ->add('commentaire')
+            ->add('clientDoit', 'text')
+            ->add('incidentPaiement', 'text')
+            ->add('modePaiement', 'text')
+            ->add('droitEntree', 'text')
+            ->add('dateStart', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
+            ->add('dateEnd', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
+            ->add('photo', 'text')
+            ->add('commentaire', 'text')
+			->add('client', new ClientType())
+			->add('abonnement', 'entity', array(
+				'class' => 'TonicmanagerAppBundle:Abonnement',
+				'property' => 'type',
+				'empty_value' => 'Choisissez une option',
+				'multiple' => false))			
         ;
     }
     

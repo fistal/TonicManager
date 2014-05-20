@@ -12,4 +12,17 @@ use Doctrine\ORM\EntityRepository;
  */
 class ClientRepository extends EntityRepository
 {
+	function findRechercheClient($nom, $dateNaissance)
+	{
+		$query = $this->CreateQueryBuilder('d');
+		
+		$query->andWhere('d.nom = :nom')
+		->andWhere('d.dateNaissance = :dateNaissance')	
+		->setParameters(array(
+		'nom'=>$nom,
+		'dateNaissance'=>$dateNaissance))
+		->setMaxResults(1);
+		
+		return $query->getQuery()->getResult();
+	}
 }

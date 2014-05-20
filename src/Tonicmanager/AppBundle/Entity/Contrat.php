@@ -12,16 +12,16 @@ use Doctrine\ORM\Mapping as ORM;
  */
 class Contrat
 {
+
+	/**
+	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Contrat",cascade={"persist"})
+	 */
+	private $client;
 	/**
 	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Abonnement")
 	 * @ORM\JoinColumn(nullable=false)
 	 */
 	private $abonnement;
-	/**
-	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Client")
-	 * @ORM\JoinColumn(nullable=false)
-	 */
-	private $client;
 	/**
 	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Supp")
 	 * @ORM\JoinColumn(nullable=false)
@@ -342,29 +342,6 @@ class Contrat
     }
 
     /**
-     * Set client
-     *
-     * @param \Tonicmanager\AppBundle\Entity\Client $client
-     * @return Contrat
-     */
-    public function setClient(\Tonicmanager\AppBundle\Entity\Client $client)
-    {
-        $this->client = $client;
-    
-        return $this;
-    }
-
-    /**
-     * Get client
-     *
-     * @return \Tonicmanager\AppBundle\Entity\Client 
-     */
-    public function getClient()
-    {
-        return $this->client;
-    }
-
-    /**
      * Set Supp
      *
      * @param \Tonicmanager\AppBundle\Entity\Supp $supp
@@ -385,5 +362,28 @@ class Contrat
     public function getSupp()
     {
         return $this->Supp;
+    }
+
+    /**
+     * Set client
+     *
+     * @param \Tonicmanager\AppBundle\Entity\Contrat $client
+     * @return Contrat
+     */
+    public function setClient(\Tonicmanager\AppBundle\Entity\Contrat $client = null)
+    {
+        $this->client = $client;
+    
+        return $this;
+    }
+
+    /**
+     * Get client
+     *
+     * @return \Tonicmanager\AppBundle\Entity\Contrat 
+     */
+    public function getClient()
+    {
+        return $this->client;
     }
 }

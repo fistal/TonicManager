@@ -5,7 +5,7 @@
 
 {% block body %}
 	{% block NasApp_body %}	
-			<h3>Vos clients : </h3>
+			<h3>Vos clients : <a href="{{path('tonicmanagerAppBundle_ajoutClient')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a></h3>
 			<div>
 				{% for client in clients %}
 					{{client.nom}}<br>

@@ -5,7 +5,7 @@
 
 {% block body %}
 	{% block NasApp_body %}	
-			<h3>Vos abonnements : </h3>
+			<h3>Vos abonnements : <a href="{{path('tonicmanagerAppBundle_ajoutAbonnement')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a></h3>
 			<div>
 				{% for abonnement in abonnements %}
 					{{abonnement.type}}<br>

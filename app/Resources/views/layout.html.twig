@@ -75,13 +75,13 @@
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li><a href="#"><span class="icon-home" ></span> Accueil</a></li>
+            <li><a href="{{path('tonicmanagerAppBundle_homepage')}}"><span class="icon-home" ></span> Accueil</a></li>
 			
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-copy"></span> Client <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Prospect</a></li>
-                <li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Nouveau client</a></li>
+                <li><a href="{{path('tonicmanagerAppBundle_ajoutContrat')}}">Nouveau contrat</a></li>
                 <li><a href="{{path('tonicmanagerAppBundle_listeClient')}}">Liste des clients</a></li>
                 <li><a href="#">Rechercher un client</a></li>
               </ul>
@@ -91,6 +91,13 @@
               <ul class="dropdown-menu">
                 <li><a href="{{path('tonicmanagerAppBundle_ajoutAbonnement')}}">Ajouter un abonnement</a></li>
                 <li><a href="{{path('tonicmanagerAppBundle_listeAbonnement')}}">Vos abonnements</a></li>
+              </ul>
+            </li>
+			<li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-copy"></span> Option <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="{{path('tonicmanagerAppBundle_ajoutOption')}}">Ajouter une option</a></li>
+                <li><a href="{{path('tonicmanagerAppBundle_listeOption')}}">Vos options</a></li>
               </ul>
             </li>
 			<li class="dropdown">
@@ -109,7 +116,9 @@
     </div>
 	
 <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
+
+  
+	  <div class="container">
 		{% block titleAction %}
 		{% endblock %}
 			{#http://fr.openclassrooms.com/forum/sujet/symfony2-une-liste-deroulante-qui-dependant-d-une-autre-59816 <br>#}
@@ -117,18 +126,18 @@
 			{#http://www.lafermeduweb.net/tutorial/les-formulaires-dans-symfony2-p100.html<br>#}
 		{% block body %}
 		{% endblock %}
-
-    </div>
-  
-	  <div class="container">
-
 	  </div>
 	  
-    <div class="container">
-      <footer>
-        <p>&copy; jr - 2014</p>
-      </footer>
-    </div> <!-- /container -->
+
+	
+	
+	<div id="footer">
+      <div class="container">
+        <p class="text-muted">&copy; Julien Rochart - 2014</p>
+      </div>
+    </div>
+	
+	<!-- /container -->
 
 
     <!-- Bootstrap core JavaScript
