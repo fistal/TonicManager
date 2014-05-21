@@ -15,10 +15,16 @@ class ClientType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
+            ->add('civilite', 'choice', array(
+				'choices'=> array('Mr'=>'Mr','Mme'=>'Mme','Mlle'=>'Mlle'),
+				'required'=> true))
             ->add('nom', 'text')
             ->add('prenom', 'text')
             ->add('email', 'text')
+            ->add('telephone', 'text')
+            ->add('portable', 'text')
             ->add('dateNaissance', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
+            ->add('lieuNaissance', 'text')
             ->add('adresse', 'text')
             ->add('ville', 'text')
             ->add('cp', 'text')	

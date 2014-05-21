@@ -17,7 +17,9 @@ class ContratType extends AbstractType
         $builder
             ->add('clientDoit', 'text')
             ->add('incidentPaiement', 'text')
-            ->add('modePaiement', 'text')
+            ->add('modePaiement', 'choice', array(
+				'choices'=> array('espece'=>'Espece','cheque'=>'Cheque'),
+				'required'=> true))
             ->add('droitEntree', 'text')
             ->add('dateStart', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
             ->add('dateEnd', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))

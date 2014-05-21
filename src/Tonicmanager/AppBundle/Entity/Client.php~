@@ -24,6 +24,13 @@ class Client
     /**
      * @var string
      *
+     * @ORM\Column(name="civilite", type="string", length=255)
+     */
+    private $civilite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
@@ -43,11 +50,32 @@ class Client
     private $email;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=255)
+     */
+    private $telephone;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="portable", type="string", length=255)
+     */
+    private $portable;	
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dateNaissance", type="date")
      */
     private $dateNaissance;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="lieuNaissance", type="string")
+     */
+    private $lieuNaissance;
 
     /**
      * @var string
@@ -249,4 +277,123 @@ class Client
         return $this->cp;
     }
 
+
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     * @return Client
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string 
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+	
+	public function upload()
+	{
+		if(null === $this->photo)
+		{
+			return;
+		}
+		
+		// On garde le nom original du fichier de l'internaute
+		$name = $this->photo->getClientOriginalName();
+		
+		// On déplace le fichier envoyé dans le répertoire de notre choix
+		$this->photo->move($this->getUploadRootDir(), $name);
+		$this->photo = $name;
+	}
+	public function getUploadDir()
+	{
+		 // On retourne le chemin relatif vers l'image pour un navigateur
+		 return 'uploads/img';
+	}
+	protected function getUploadRootDir()
+	{
+		// On retourne le chemin relatif vers l'image pour notre code PHP
+		return __DIR__.'/../../../../web/'.$this->getUploadDir();
+	} 
+	
+	
+
+    /**
+     * Set telephone
+     *
+     * @param string $telephone
+     * @return Client
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return string 
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set portable
+     *
+     * @param string $portable
+     * @return Client
+     */
+    public function setPortable($portable)
+    {
+        $this->portable = $portable;
+    
+        return $this;
+    }
+
+    /**
+     * Get portable
+     *
+     * @return string 
+     */
+    public function getPortable()
+    {
+        return $this->portable;
+    }
+
+    /**
+     * Set lieuNaissance
+     *
+     * @param string $lieuNaissance
+     * @return Client
+     */
+    public function setLieuNaissance($lieuNaissance)
+    {
+        $this->lieuNaissance = $lieuNaissance;
+    
+        return $this;
+    }
+
+    /**
+     * Get lieuNaissance
+     *
+     * @return string 
+     */
+    public function getLieuNaissance()
+    {
+        return $this->lieuNaissance;
+    }
 }

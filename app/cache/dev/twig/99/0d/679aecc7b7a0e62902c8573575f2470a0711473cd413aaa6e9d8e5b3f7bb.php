@@ -67,17 +67,17 @@ class __TwigTemplate_990d679aecc7b7a0e62902c8573575f2470a0711473cd413aaa6e9d8e5b
 \t\t\t\t\t\t";
         // line 22
         $context['_parent'] = (array) $context;
-        $context['_seq'] = twig_ensure_traversable($this->getContext($context, "options"));
+        $context['_seq'] = twig_ensure_traversable((isset($context["options"]) ? $context["options"] : $this->getContext($context, "options")));
         foreach ($context['_seq'] as $context["_key"] => $context["option"]) {
             // line 23
             echo "\t\t\t\t\t\t\t<tr>
 \t\t\t\t\t\t\t\t<td>";
             // line 24
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "option"), "libelle"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["option"]) ? $context["option"] : $this->getContext($context, "option")), "libelle"), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t<td>";
             // line 25
-            echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "option"), "prix"), "html", null, true);
+            echo twig_escape_filter($this->env, $this->getAttribute((isset($context["option"]) ? $context["option"] : $this->getContext($context, "option")), "prix"), "html", null, true);
             echo "</td>
 \t\t\t\t\t\t\t\t<td><a class=\"btn btn-warning\" href=\"#\">Editer</a></td>
 \t\t\t\t\t\t\t</tr>

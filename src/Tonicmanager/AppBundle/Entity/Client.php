@@ -24,6 +24,13 @@ class Client
     /**
      * @var string
      *
+     * @ORM\Column(name="civilite", type="string", length=255)
+     */
+    private $civilite;
+
+    /**
+     * @var string
+     *
      * @ORM\Column(name="nom", type="string", length=255)
      */
     private $nom;
@@ -43,11 +50,32 @@ class Client
     private $email;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="telephone", type="string", length=255)
+     */
+    private $telephone;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="portable", type="string", length=255)
+     */
+    private $portable;	
+
+    /**
      * @var \DateTime
      *
      * @ORM\Column(name="dateNaissance", type="date")
      */
     private $dateNaissance;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="lieuNaissance", type="string")
+     */
+    private $lieuNaissance;
 
     /**
      * @var string
@@ -299,4 +327,96 @@ class Client
 	} 
 	
 	
+
+    /**
+     * Set telephone
+     *
+     * @param string $telephone
+     * @return Client
+     */
+    public function setTelephone($telephone)
+    {
+        $this->telephone = $telephone;
+    
+        return $this;
+    }
+
+    /**
+     * Get telephone
+     *
+     * @return string 
+     */
+    public function getTelephone()
+    {
+        return $this->telephone;
+    }
+
+    /**
+     * Set portable
+     *
+     * @param string $portable
+     * @return Client
+     */
+    public function setPortable($portable)
+    {
+        $this->portable = $portable;
+    
+        return $this;
+    }
+
+    /**
+     * Get portable
+     *
+     * @return string 
+     */
+    public function getPortable()
+    {
+        return $this->portable;
+    }
+
+    /**
+     * Set lieuNaissance
+     *
+     * @param string $lieuNaissance
+     * @return Client
+     */
+    public function setLieuNaissance($lieuNaissance)
+    {
+        $this->lieuNaissance = $lieuNaissance;
+    
+        return $this;
+    }
+
+    /**
+     * Get lieuNaissance
+     *
+     * @return string 
+     */
+    public function getLieuNaissance()
+    {
+        return $this->lieuNaissance;
+    }
+
+    /**
+     * Set civilite
+     *
+     * @param string $civilite
+     * @return Client
+     */
+    public function setCivilite($civilite)
+    {
+        $this->civilite = $civilite;
+    
+        return $this;
+    }
+
+    /**
+     * Get civilite
+     *
+     * @return string 
+     */
+    public function getCivilite()
+    {
+        return $this->civilite;
+    }
 }
