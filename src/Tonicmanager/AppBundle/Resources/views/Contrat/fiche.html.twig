@@ -1,0 +1,76 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+	{% block NasApp_body %}	
+		
+		
+<div class="panel panel-primary">
+	<div class="panel-heading">
+		<h3 class="panel-title">Fiche {{contrat.client.id}} : {{contrat.client.nom}}</h3>
+	</div>
+	<div class="panel-body">
+	
+		<div class="row">
+		  <div class="col-sm-6 col-md-4">
+			<div class="thumbnail">
+				<img src="/TonicManager/web/uploads/img/{{contrat.client.photo}}">
+			  <div class="caption">
+				<h3>Information client</h3>
+				<p>
+				
+				
+					<div class="input-group">
+						<span class="input-group-addon">Nom</span>
+						<input type="text" id="disabledTextInput" class="form-control" readonly="readonly" value="{{contrat.client.nom}}">
+					</div>	
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">Prénom</span>
+						<input type="text" id="disabledTextInput" class="form-control" readonly="readonly" value="{{contrat.client.prenom}}">
+					</div>	
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">E-mail</span>
+						<input type="text" id="disabledTextInput" class="form-control" readonly="readonly" value="{{contrat.client.email}}">
+					</div>	
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">Adresse</span>
+						<input type="text" id="disabledTextInput" class="form-control" readonly="readonly" value="{{contrat.client.adresse}}">
+					</div>
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">Ville</span>
+						<input type="text" id="disabledTextInput" class="form-control" readonly="readonly" value="{{contrat.client.ville}}">
+					</div>	
+					<br>
+					<div class="input-group">
+						<span class="input-group-addon">Code postal</span>
+						<input type="text" id="disabledTextInput" class="form-control" readonly="readonly" value="{{contrat.client.cp}}">
+					</div>	
+					
+				</p>
+			  </div>
+			</div>
+		  </div>
+		  <div class="col-sm-12 col-md-8">
+				<h3>Information contrat</h3>
+				<p>
+					Abonnement : {{contrat.abonnement.type}}<br><br>
+					Date de début : {{contrat.dateStart|date('d - m - Y')}}<br><br>
+					Date de fin : {{contrat.dateEnd|date('d - m - Y')}}<br><br>
+					Mode de paiement : {{contrat.modePaiement}}<br><br>
+					Commentaire : {{contrat.commentaire}}<br><br>
+				</p>
+		  </div>
+		</div>	
+	</div>
+</div>		
+		
+		
+		
+	{% endblock %}
+{% endblock %}
