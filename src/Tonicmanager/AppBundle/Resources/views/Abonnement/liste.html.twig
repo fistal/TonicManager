@@ -5,11 +5,30 @@
 
 {% block body %}
 	{% block NasApp_body %}	
-			<h3>Vos abonnements : <a href="{{path('tonicmanagerAppBundle_ajoutAbonnement')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a></h3>
-			<div>
-				{% for abonnement in abonnements %}
-					{{abonnement.type}}<br>
-				{% endfor %}
-			</div>
+		<div class="panel panel-primary">
+			  <div class="panel-heading">
+				<h3 class="panel-title">Vos abonnements <a href="{{path('tonicmanagerAppBundle_ajoutAbonnement')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a></h3>
+			  </div>
+			  <div class="panel-body">		
+				<table class="table table-hover" id="myTable">
+					<thead>
+					  <tr>
+						<th class="header">Type</th>
+						<th class="header">Tarif</th>			
+						<th></th>
+					  </tr>
+					</thead>
+					<tbody>
+						{% for abonnement in abonnements %}
+							<tr>
+								<td>{{abonnement.type}}</td>
+								<td>{{abonnement.tarif}}</td>
+								<td><a class="btn btn-warning" href="#">Editer</a></td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>					  
+			  </div>
+		</div>		
 	{% endblock %}
 {% endblock %}

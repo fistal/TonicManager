@@ -47,16 +47,47 @@ class __TwigTemplate_134a3c265fffb2eb6b3eebf1bde757515c5af67ca143e87d36cea9a6f0b
     public function block_NasApp_body($context, array $blocks = array())
     {
         echo "\t
-\t\t\t<h3>Nouvel abonnement</h3>
 \t\t\t <form method=\"post\" ";
-        // line 9
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
+        // line 8
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'enctype');
         echo ">
-\t\t\t ";
-        // line 10
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+\t\t\t\t<div class=\"panel panel-primary\">
+\t\t\t\t\t  <div class=\"panel-heading\">
+\t\t\t\t\t\t<h3 class=\"panel-title\">Nouvel abonnement</h3>
+\t\t\t\t\t  </div>
+\t\t\t\t\t  <div class=\"panel-body\">\t\t\t\t
+\t\t\t\t\t\t\t\t<div class=\"row\">
+\t\t\t\t\t\t\t\t\t<div class=\"col-xs-6\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"input-group-addon\">Type</span>
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 18
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "type"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
-\t\t\t <input type=\"submit\" class=\"btn btn-primary\" />
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"col-xs-6\">
+\t\t\t\t\t\t\t\t\t\t<div class=\"input-group\">
+\t\t\t\t\t\t\t\t\t\t\t<span class=\"input-group-addon\">Tarif</span>
+\t\t\t\t\t\t\t\t\t\t\t";
+        // line 24
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "tarif"), 'widget', array("attr" => array("class" => "form-control")));
+        echo "
+\t\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t<br>
+\t\t\t\t\t  </div>
+\t\t\t\t</div>\t\t\t\t 
+\t\t\t ";
+        // line 31
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'rest');
+        echo "
+\t\t\t  <div class=\"form-group\">
+\t\t\t\t<div class=\"col-sm-offset-4 col-sm-10\">
+\t\t\t\t  <input type=\"submit\" class=\"btn btn-primary\" value=\"Enregistrer\" class=\"btn btn-default\"/>
+\t\t\t\t</div>
+\t\t\t  </div> 
 \t\t\t </form>
 \t";
     }
@@ -73,6 +104,6 @@ class __TwigTemplate_134a3c265fffb2eb6b3eebf1bde757515c5af67ca143e87d36cea9a6f0b
 
     public function getDebugInfo()
     {
-        return array (  57 => 10,  53 => 9,  43 => 7,  40 => 6,  33 => 3,  30 => 2,);
+        return array (  84 => 31,  74 => 24,  65 => 18,  52 => 8,  43 => 7,  40 => 6,  33 => 3,  30 => 2,);
     }
 }

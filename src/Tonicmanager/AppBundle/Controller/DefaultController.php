@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Tonicmanager\AppBundle\Form\ScanCarteType;
 use Tonicmanager\AppBundle\Form\RechercheClientType;
 use Tonicmanager\AppBundle\Entity\Client;
+use Tonicmanager\AppBundle\Entity\Contrat;
 use Tonicmanager\AppBundle\Form\ClientType;
 use Tonicmanager\AppBundle\Form\ConsultationType;
 
@@ -21,7 +22,7 @@ class DefaultController extends Controller
 
     public function scanCarteAction()
     {	
-		$client = new Client();
+		$contrat = new Contrat();
 		$form = $this->createForm(new ScanCarteType());
 		
 		//On récupère la requête
@@ -37,12 +38,13 @@ class DefaultController extends Controller
 
 				$repo = $this->getDoctrine()
 							->getManager()
-							->getRepository('TonicmanagerAppBundle:Client');
+							->getRepository('TonicmanagerAppBundle:Contrat');
 				
 
-				$client = $repo->find($data["id"]);				
+				$TBcontrat = $repo->findByClient($data["id"]);				
+				$contrat = $TBcontrat[0];				
 				
-				return $this->render('TonicmanagerAppBundle:Client:detail.html.twig', array('client'=>$client));
+				return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('contrat'=>$contrat));
 			}			
 		}
 		        
@@ -51,7 +53,7 @@ class DefaultController extends Controller
 
     public function consultationAction()
     {	
-		$client = new Client();
+		$contrat = new Contrat();
 		$form = $this->createForm(new ConsultationType());
 		
 		//On récupère la requête
@@ -67,12 +69,13 @@ class DefaultController extends Controller
 
 				$repo = $this->getDoctrine()
 							->getManager()
-							->getRepository('TonicmanagerAppBundle:Client');
+							->getRepository('TonicmanagerAppBundle:Contrat');
 				
 
-				$client = $repo->find($data["id"]);				
+				$TBcontrat = $repo->findByClient($data["id"]);				
+				$contrat = $TBcontrat[0];	
 				
-				return $this->render('TonicmanagerAppBundle:Client:detail.html.twig', array('client'=>$client));
+				return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('contrat'=>$contrat));
 			}			
 		}
 		        
@@ -81,7 +84,7 @@ class DefaultController extends Controller
 	
 	public function rechercheClientAction()
     {
-		$client = new Client();
+		$contrat = new Contrat();
 		$form = $this->createForm(new RechercheClientType());
 		
 		//On récupère la requête
@@ -98,14 +101,16 @@ class DefaultController extends Controller
 				$TBdateNaissance = $data["dateNaissance"];
 				$dateNaissance = $TBdateNaissance["year"].'-'.$TBdateNaissance["month"].'-'.$TBdateNaissance["day"];
 				
-				$repo = $this->getDoctrine()
-							->getManager()
-							->getRepository('TonicmanagerAppBundle:Client');
+				$em = $this->getDoctrine()
+							->getManager();
 				
-				$TBclient = $repo->findRechercheClient($nom, $dateNaissance);		
-				$client = $TBclient[0];				
+				$TBclient = $em->getRepository('TonicmanagerAppBundle:Client')->findRechercheClient($nom, $dateNaissance);		
+				$client = $TBclient[0];	
+
+				$TBcontrat = $em->getRepository('TonicmanagerAppBundle:Contrat')->findByClient($client->getId());				
+				$contrat = $TBcontrat[0];
 			
-				return $this->render('TonicmanagerAppBundle:Client:detail.html.twig', array('client'=>$client));
+				return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('contrat'=>$contrat));
 			}
 		}
 		        

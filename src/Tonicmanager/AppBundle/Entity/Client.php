@@ -69,6 +69,13 @@ class Client
      * @ORM\Column(name="cp", type="integer")
      */
     private $cp;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Photo", type="string", length=255)
+     */
+    private $photo;	
 
 
     /**
@@ -242,4 +249,54 @@ class Client
         return $this->cp;
     }
 
+
+    /**
+     * Set photo
+     *
+     * @param string $photo
+     * @return Client
+     */
+    public function setPhoto($photo)
+    {
+        $this->photo = $photo;
+    
+        return $this;
+    }
+
+    /**
+     * Get photo
+     *
+     * @return string 
+     */
+    public function getPhoto()
+    {
+        return $this->photo;
+    }
+	
+	public function upload()
+	{
+		if(null === $this->photo)
+		{
+			return;
+		}
+		
+		// On garde le nom original du fichier de l'internaute
+		$name = $this->photo->getClientOriginalName();
+		
+		// On déplace le fichier envoyé dans le répertoire de notre choix
+		$this->photo->move($this->getUploadRootDir(), $name);
+		$this->photo = $name;
+	}
+	public function getUploadDir()
+	{
+		 // On retourne le chemin relatif vers l'image pour un navigateur
+		 return 'uploads/img';
+	}
+	protected function getUploadRootDir()
+	{
+		// On retourne le chemin relatif vers l'image pour notre code PHP
+		return __DIR__.'/../../../../web/'.$this->getUploadDir();
+	} 
+	
+	
 }

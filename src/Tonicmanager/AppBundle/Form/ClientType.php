@@ -21,7 +21,8 @@ class ClientType extends AbstractType
             ->add('dateNaissance', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
             ->add('adresse', 'text')
             ->add('ville', 'text')
-            ->add('cp', 'text')			
+            ->add('cp', 'text')	
+            ->add('photo', 'file')			
         ;
     }
     

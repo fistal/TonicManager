@@ -11,13 +11,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity(repositoryClass="Tonicmanager\AppBundle\Entity\ClientRepository")
  */
 class Client
-{
-
-	/**
-	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Contrat",cascade={"persist"})
-	 */
-	private $contrat;	
-
+{	
     /**
      * @var integer
      *
@@ -75,6 +69,13 @@ class Client
      * @ORM\Column(name="cp", type="integer")
      */
     private $cp;
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Photo", type="string", length=255)
+     */
+    private $photo;	
 
 
     /**
@@ -247,4 +248,5 @@ class Client
     {
         return $this->cp;
     }
+
 }

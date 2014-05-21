@@ -192,6 +192,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Tonicmanager\\AppBundle\\Controller\\ContratController::ajoutAction',  '_route' => 'tonicmanagerAppBundle_ajoutContrat',);
         }
 
+        // tonicmanagerAppBundle_ficheContrat
+        if (0 === strpos($pathinfo, '/ficheContrat') && preg_match('#^/ficheContrat/(?P<idClient>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'tonicmanagerAppBundle_ficheContrat')), array (  '_controller' => 'Tonicmanager\\AppBundle\\Controller\\ContratController::ficheAction',));
+        }
+
         // _welcome
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

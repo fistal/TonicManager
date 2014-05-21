@@ -6,6 +6,8 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Tonicmanager\AppBundle\Entity\Contrat;
+use Tonicmanager\AppBundle\Entity\Client;
+use Tonicmanager\AppBundle\Entity\Supp;
 use Tonicmanager\AppBundle\Form\ContratType;
 
 class ContratController extends Controller
@@ -21,6 +23,11 @@ class ContratController extends Controller
 			$form->bind($request);
 			if($form->isValid())
 			{
+			
+
+				// Ici : On traite manuellement le fichier uploadé
+				$contrat->getClient()->upload();
+				
 				$em = $this->getDoctrine()
 						->getManager();
 				$em->persist($contrat);
@@ -33,5 +40,10 @@ class ContratController extends Controller
 				
 		return $this->render('TonicmanagerAppBundle:Contrat:ajouter.html.twig', array('form'=>$form->createView()));
 		
+	}
+	
+	public function ficheAction($idClient)
+	{
+		return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('idClient'=>$idClient));
 	}
 }

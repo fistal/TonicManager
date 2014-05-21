@@ -61,12 +61,18 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
             <span class=\"icon-bar\"></span>
             <span class=\"icon-bar\"></span>
           </button>
-          <a class=\"navbar-brand\" href=\"#\">Tonic Manager</a>
+          <a class=\"navbar-brand\" href=\"#\"></a>
         </div>
         <div class=\"navbar-collapse collapse\">
           <ul class=\"nav navbar-nav\">
+\t\t  <li>
+\t\t\t<img src=\"";
+        // line 79
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/images/tonicmanager.png"), "html", null, true);
+        echo "\" style=\"width:90px;\">
+\t\t  </li>
             <li><a href=\"";
-        // line 78
+        // line 81
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_homepage");
         echo "\"><span class=\"icon-home\" ></span> Accueil</a></li>
 \t\t\t
@@ -74,11 +80,11 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Client <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 83
+        // line 86
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutContrat");
         echo "\">Nouveau clients</a></li>
                 <li><a href=\"";
-        // line 84
+        // line 87
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeClient");
         echo "\">Liste des clients</a></li>
                 <li><a href=\"#\">Rechercher un client</a></li>
@@ -88,11 +94,11 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Abonnement <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 91
+        // line 94
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutAbonnement");
         echo "\">Ajouter un abonnement</a></li>
                 <li><a href=\"";
-        // line 92
+        // line 95
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeAbonnement");
         echo "\">Vos abonnements</a></li>
               </ul>
@@ -101,11 +107,11 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Option <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 98
+        // line 101
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutOption");
         echo "\">Ajouter une option</a></li>
                 <li><a href=\"";
-        // line 99
+        // line 102
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeOption");
         echo "\">Vos options</a></li>
               </ul>
@@ -114,11 +120,11 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Outils <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 105
+        // line 108
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutClient");
         echo "\">Fréquentations</a></li>
                 <li><a href=\"";
-        // line 106
+        // line 109
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutClient");
         echo "\">Statistique</a></li>
               </ul>
@@ -128,9 +134,9 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
             <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">
           </form>
 \t\t\t";
-        // line 113
-        $this->displayBlock('printDevis', $context, $blocks);
         // line 116
+        $this->displayBlock('printDevis', $context, $blocks);
+        // line 119
         echo "        </div><!--/.nav-collapse -->
       </div>
     </div>
@@ -140,18 +146,18 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
   
 \t  <div class=\"container\">
 \t\t";
-        // line 124
-        $this->displayBlock('titleAction', $context, $blocks);
-        // line 126
-        echo "\t\t\t";
         // line 127
-        echo "\t\t\t";
-        // line 128
-        echo "\t\t\t";
+        $this->displayBlock('titleAction', $context, $blocks);
         // line 129
+        echo "\t\t\t";
+        // line 130
+        echo "\t\t\t";
+        // line 131
+        echo "\t\t\t";
+        // line 132
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 131
+        // line 134
         echo "\t  </div>
 \t  
 
@@ -159,7 +165,7 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 \t
 \t<div id=\"footer\">
       <div class=\"container\">
-        <p class=\"text-muted\">&copy; Julien Rochart - 2014</p>
+        <p class=\"text-muted\">&copy; Julien Rochart - 2014 - V2</p>
       </div>
     </div>
 \t
@@ -270,25 +276,25 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 \t";
     }
 
-    // line 113
+    // line 116
     public function block_printDevis($context, array $blocks = array())
     {
-        // line 114
+        // line 117
         echo "\t\t
 \t\t\t";
     }
 
-    // line 124
+    // line 127
     public function block_titleAction($context, array $blocks = array())
     {
-        // line 125
+        // line 128
         echo "\t\t";
     }
 
-    // line 129
+    // line 132
     public function block_body($context, array $blocks = array())
     {
-        // line 130
+        // line 133
         echo "\t\t";
     }
 
@@ -304,6 +310,6 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 
     public function getDebugInfo()
     {
-        return array (  292 => 130,  289 => 129,  285 => 125,  282 => 124,  277 => 114,  274 => 113,  241 => 31,  236 => 29,  231 => 27,  227 => 26,  223 => 25,  219 => 24,  216 => 23,  213 => 22,  207 => 19,  203 => 18,  199 => 17,  195 => 16,  190 => 15,  187 => 14,  181 => 12,  155 => 131,  152 => 129,  150 => 128,  148 => 127,  146 => 126,  144 => 124,  134 => 116,  132 => 113,  122 => 106,  118 => 105,  109 => 99,  105 => 98,  96 => 92,  92 => 91,  82 => 84,  78 => 83,  70 => 78,  50 => 60,  48 => 22,  45 => 21,  43 => 14,  38 => 12,  25 => 1,);
+        return array (  298 => 133,  295 => 132,  291 => 128,  288 => 127,  283 => 117,  280 => 116,  247 => 31,  242 => 29,  237 => 27,  233 => 26,  229 => 25,  225 => 24,  222 => 23,  219 => 22,  213 => 19,  209 => 18,  205 => 17,  201 => 16,  196 => 15,  193 => 14,  187 => 12,  161 => 134,  158 => 132,  156 => 131,  154 => 130,  152 => 129,  150 => 127,  140 => 119,  138 => 116,  128 => 109,  124 => 108,  115 => 102,  111 => 101,  102 => 95,  98 => 94,  88 => 87,  84 => 86,  76 => 81,  71 => 79,  50 => 60,  48 => 22,  45 => 21,  43 => 14,  38 => 12,  25 => 1,);
     }
 }

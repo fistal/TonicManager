@@ -32,4 +32,7 @@ tonicmanagerAppBundle_listeOption:
 tonicmanagerAppBundle_ajoutContrat:
     path: /ajoutContrat
     defaults: { _controller: TonicmanagerAppBundle:Contrat:ajout }
+tonicmanagerAppBundle_ficheContrat:
+    path: /ficheContrat/{idClient}
+    defaults: { _controller: TonicmanagerAppBundle:Contrat:fiche }
 

@@ -14,16 +14,21 @@ class Contrat
 {
 
 	/**
-	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Contrat",cascade={"persist"})
+	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Client",cascade={"persist"})
 	 */
 	private $client;
+	/**
+	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Banque",cascade={"persist"})
+	 * @ORM\JoinColumn(nullable=true)
+	 */
+	private $banque;
 	/**
 	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Abonnement")
 	 * @ORM\JoinColumn(nullable=false)
 	 */
 	private $abonnement;
 	/**
-	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Supp")
+	 * @ORM\ManyToMany(targetEntity="Tonicmanager\AppBundle\Entity\Supp",cascade={"persist"})
 	 * @ORM\JoinColumn(nullable=false)
 	 */
 	private $Supp;
@@ -40,7 +45,7 @@ class Contrat
     /**
      * @var boolean
      *
-     * @ORM\Column(name="etat", type="boolean")
+     * @ORM\Column(name="etat", type="boolean", nullable=true)
      */
     private $etat;
 
@@ -85,13 +90,6 @@ class Contrat
      * @ORM\Column(name="DateEnd", type="date")
      */
     private $dateEnd;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="Photo", type="string", length=255)
-     */
-    private $photo;
 
     /**
      * @var string
@@ -273,29 +271,6 @@ class Contrat
     }
 
     /**
-     * Set photo
-     *
-     * @param string $photo
-     * @return Contrat
-     */
-    public function setPhoto($photo)
-    {
-        $this->photo = $photo;
-    
-        return $this;
-    }
-
-    /**
-     * Get photo
-     *
-     * @return string 
-     */
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    /**
      * Set commentaire
      *
      * @param string $commentaire
@@ -367,10 +342,10 @@ class Contrat
     /**
      * Set client
      *
-     * @param \Tonicmanager\AppBundle\Entity\Contrat $client
+     * @param \Tonicmanager\AppBundle\Entity\Client $client
      * @return Contrat
      */
-    public function setClient(\Tonicmanager\AppBundle\Entity\Contrat $client = null)
+    public function setClient(\Tonicmanager\AppBundle\Entity\Client $client = null)
     {
         $this->client = $client;
     
@@ -385,5 +360,58 @@ class Contrat
     public function getClient()
     {
         return $this->client;
+    }
+
+    /**
+     * Set banque
+     *
+     * @param \Tonicmanager\AppBundle\Entity\Banque $banque
+     * @return Contrat
+     */
+    public function setBanque(\Tonicmanager\AppBundle\Entity\Banque $banque = null)
+    {
+        $this->banque = $banque;
+    
+        return $this;
+    }
+
+    /**
+     * Get banque
+     *
+     * @return \Tonicmanager\AppBundle\Entity\Banque 
+     */
+    public function getBanque()
+    {
+        return $this->banque;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->Supp = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+    
+    /**
+     * Add Supp
+     *
+     * @param \Tonicmanager\AppBundle\Entity\Supp $supp
+     * @return Contrat
+     */
+    public function addSupp(\Tonicmanager\AppBundle\Entity\Supp $supp)
+    {
+        $this->Supp[] = $supp;
+    
+        return $this;
+    }
+
+    /**
+     * Remove Supp
+     *
+     * @param \Tonicmanager\AppBundle\Entity\Supp $supp
+     */
+    public function removeSupp(\Tonicmanager\AppBundle\Entity\Supp $supp)
+    {
+        $this->Supp->removeElement($supp);
     }
 }

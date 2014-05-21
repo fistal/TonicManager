@@ -21,14 +21,20 @@ class ContratType extends AbstractType
             ->add('droitEntree', 'text')
             ->add('dateStart', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
             ->add('dateEnd', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
-            ->add('photo', 'text')
-            ->add('commentaire', 'text')
+            ->add('commentaire', 'textarea')
 			->add('client', new ClientType())
+			->add('banque', new BanqueType())
 			->add('abonnement', 'entity', array(
 				'class' => 'TonicmanagerAppBundle:Abonnement',
 				'property' => 'type',
+				'empty_value' => 'Choisissez un abonnement',
+				'multiple' => false))
+			->add('supp', 'entity', array(
+				'class' => 'TonicmanagerAppBundle:Supp',
+				'property' => 'libelle',
 				'empty_value' => 'Choisissez une option',
-				'multiple' => false))			
+				'expanded' => true,
+				'multiple' => true))			
         ;
     }
     
