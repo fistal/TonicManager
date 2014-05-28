@@ -1,39 +1,38 @@
-{% extends "::layout.html.twig" %}
+{% extends "TonicmanagerAppBundle::admin.html.twig" %}
 {% block title %}
 	{{ parent() }}
 {% endblock %}
 
-{% block body %}
-	{% block NasApp_body %}	
-			 <form method="post" {{ form_enctype(form) }}>
-				<div class="panel panel-primary">
-					  <div class="panel-heading">
-						<h3 class="panel-title">Nouvel abonnement</h3>
-					  </div>
-					  <div class="panel-body">				
-								<div class="row">
-									<div class="col-xs-6">
-										<div class="input-group">
-											<span class="input-group-addon">Type</span>
-											{{ form_widget(form.type,  { 'attr': {'class': 'form-control'}}) }}
-										</div>
+{% block TonicManagerAdminTitre_body %}Ajouter un abonnment{% endblock %}
+{% block TonicManagerAdmin_body %}	
+		 <form method="post" {{ form_enctype(form) }}>
+			<div class="panel panel-primary">
+				  <div class="panel-heading">
+					<h3 class="panel-title">Nouvel abonnement</h3>
+				  </div>
+				  <div class="panel-body">				
+							<div class="row">
+								<div class="col-xs-6">
+									<div class="input-group">
+										<span class="input-group-addon">Type</span>
+										{{ form_widget(form.type,  { 'attr': {'class': 'form-control'}}) }}
 									</div>
-									<div class="col-xs-6">
-										<div class="input-group">
-											<span class="input-group-addon">Tarif</span>
-											{{ form_widget(form.tarif,  { 'attr': {'class': 'form-control'}}) }}
-										</div>
+								</div>
+								<div class="col-xs-6">
+									<div class="input-group">
+										<span class="input-group-addon">Tarif</span>
+										{{ form_widget(form.tarif,  { 'attr': {'class': 'form-control'}}) }}
 									</div>
-							</div>
-							<br>
-					  </div>
-				</div>				 
-			 {{ form_rest(form) }}
-			  <div class="form-group">
-				<div class="col-sm-offset-4 col-sm-10">
-				  <input type="submit" class="btn btn-primary" value="Enregistrer" class="btn btn-default"/>
-				</div>
-			  </div> 
-			 </form>
-	{% endblock %}
+								</div>
+						</div>
+						<br>
+				  </div>
+			</div>				 
+		 {{ form_rest(form) }}
+		  <div class="form-group">
+			<div class="col-sm-offset-4 col-sm-10">
+			  <input type="submit" class="btn btn-primary" value="Enregistrer" class="btn btn-default"/>
+			</div>
+		  </div> 
+		 </form>
 {% endblock %}

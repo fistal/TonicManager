@@ -12,9 +12,10 @@
     <title>{% block title %} Tonic Manager {% endblock%}</title>
     
 	{% block stylesheets %}
-	<link href="{{ asset('dist/css/datepicker.css') }}" rel="stylesheet">
+	  
     <link href="{{ asset('dist/css/bootstrap-theme.css') }}" rel="stylesheet">
 	<link href="{{ asset('dist/css/bootstrap.min.css') }}" rel="stylesheet">			
+	<link href="{{ asset('dist/css/dashboard.css') }}" rel="stylesheet">
 	<link href="{{ asset('dist/css/theme.css') }}" rel="stylesheet">			
 	<link href="{{ asset('dist/css/jquery-ui.css') }}" rel="stylesheet">			
 	<link href="{{ asset('dist/css/docs.min.css') }}" rel="stylesheet">			
@@ -96,27 +97,7 @@
                 <li><a href="#">Rechercher un client</a></li>
               </ul>
             </li>
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-copy"></span> Abonnement <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="{{path('tonicmanagerAppBundle_ajoutAbonnement')}}">Ajouter un abonnement</a></li>
-                <li><a href="{{path('tonicmanagerAppBundle_listeAbonnement')}}">Vos abonnements</a></li>
-              </ul>
-            </li>
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-copy"></span> Option <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="{{path('tonicmanagerAppBundle_ajoutOption')}}">Ajouter une option</a></li>
-                <li><a href="{{path('tonicmanagerAppBundle_listeOption')}}">Vos options</a></li>
-              </ul>
-            </li>		
-			<li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="icon-copy"></span> Outils <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Fréquentations</a></li>
-                <li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Statistique</a></li>
-              </ul>
-            </li>			
+			<li><a href="{{path('tonicmanagerAppBundle_admin')}}"><span class="glyphicon glyphicon-cog" ></span> Admin</a></li>			
           </ul>
 		  <form class="navbar-form navbar-right">
             <input type="text" class="form-control" placeholder="Search...">
@@ -126,22 +107,13 @@
 			{% endblock %}
         </div><!--/.nav-collapse -->
       </div>
-    </div>
+</div>
 	
 <!-- Main jumbotron for a primary marketing message or call to action -->
-
-  
-	  <div class="container">
-		{% block titleAction %}
+	  	{% block titleAction %}
 		{% endblock %}
-			{#http://fr.openclassrooms.com/forum/sujet/symfony2-une-liste-deroulante-qui-dependant-d-une-autre-59816 <br>#}
-			{#http://fr.openclassrooms.com/forum/sujet/sf2-formulaire-libre<br>#}
-			{#http://www.lafermeduweb.net/tutorial/les-formulaires-dans-symfony2-p100.html<br>#}
 		{% block body %}
 		{% endblock %}
-	  </div>
-	  
-
 	
 	
 	<div id="footer">

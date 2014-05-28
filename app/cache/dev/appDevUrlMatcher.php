@@ -142,6 +142,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'Tonicmanager\\AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'tonicmanagerAppBundle_homepage',);
         }
 
+        // tonicmanagerAppBundle_admin
+        if ($pathinfo === '/dashboard') {
+            return array (  '_controller' => 'Tonicmanager\\AppBundle\\Controller\\DefaultController::dashboardAction',  '_route' => 'tonicmanagerAppBundle_admin',);
+        }
+
         // tonicmanagerAppBundle_scanClient
         if ($pathinfo === '/scanCarte') {
             return array (  '_controller' => 'Tonicmanager\\AppBundle\\Controller\\DefaultController::scanCarteAction',  '_route' => 'tonicmanagerAppBundle_scanClient',);

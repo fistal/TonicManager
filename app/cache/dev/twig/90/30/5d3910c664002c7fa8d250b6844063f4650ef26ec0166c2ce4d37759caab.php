@@ -40,23 +40,30 @@ class __TwigTemplate_90305d3910c664002c7fa8d250b6844063f4650ef26ec0166c2ce4d3775
     public function block_body($context, array $blocks = array())
     {
         // line 7
-        echo "\t";
+        echo "<div class=\"container\">
+\t";
+        // line 8
         $this->displayBlock('NasApp_body', $context, $blocks);
+        // line 47
+        echo "\t</div>
+";
     }
 
+    // line 8
     public function block_NasApp_body($context, array $blocks = array())
     {
         echo "\t
+\t
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-3\">
 \t\t\t\t\t";
-        // line 10
+        // line 12
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("TonicmanagerAppBundle:Default:scanCarte"));
         echo "
 \t\t\t</div>
 \t\t\t<div class=\"col-md-8\">
 \t\t\t\t\t";
-        // line 13
+        // line 15
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("TonicmanagerAppBundle:Default:rechercheClient"));
         echo "
 \t\t\t</div>
@@ -65,7 +72,7 @@ class __TwigTemplate_90305d3910c664002c7fa8d250b6844063f4650ef26ec0166c2ce4d3775
 \t\t<div class=\"row\">
 \t\t\t<div class=\"col-md-3\">
 \t\t\t\t";
-        // line 19
+        // line 21
         echo $this->env->getExtension('http_kernel')->renderFragment($this->env->getExtension('http_kernel')->controller("TonicmanagerAppBundle:Default:consultation"));
         echo "
 \t\t\t</div>
@@ -91,6 +98,7 @@ class __TwigTemplate_90305d3910c664002c7fa8d250b6844063f4650ef26ec0166c2ce4d3775
 \t\t\t</div>
 
 \t\t</div>
+\t\t
 \t";
     }
 
@@ -106,6 +114,6 @@ class __TwigTemplate_90305d3910c664002c7fa8d250b6844063f4650ef26ec0166c2ce4d3775
 
     public function getDebugInfo()
     {
-        return array (  69 => 19,  60 => 13,  54 => 10,  43 => 7,  40 => 6,  33 => 3,  30 => 2,  31 => 3,  28 => 2,);
+        return array (  76 => 21,  67 => 15,  61 => 12,  53 => 8,  48 => 47,  46 => 8,  43 => 7,  40 => 6,  33 => 3,  30 => 2,  31 => 3,  28 => 2,);
     }
 }

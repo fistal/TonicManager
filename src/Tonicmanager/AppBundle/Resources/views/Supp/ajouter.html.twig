@@ -1,10 +1,10 @@
-{% extends "::layout.html.twig" %}
+{% extends "TonicmanagerAppBundle::admin.html.twig" %}
 {% block title %}
 	{{ parent() }}
 {% endblock %}
 
-{% block body %}
-	{% block NasApp_body %}	
+{% block TonicManagerAdminTitre_body %}Ajouter une option{% endblock %}
+{% block TonicManagerAdmin_body %}	
 			 <form method="post" {{ form_enctype(form) }}>
 				<div class="panel panel-primary">
 					  <div class="panel-heading">
@@ -35,5 +35,4 @@
 				</div>
 			  </div> 
 			 </form>
-	{% endblock %}
 {% endblock %}

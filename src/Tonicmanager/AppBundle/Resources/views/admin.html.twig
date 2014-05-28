@@ -1,0 +1,48 @@
+{% extends "::layout.html.twig" %}
+{% block title %}
+	{{ parent() }}
+{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+	<div class="row">
+		{#  MENU ADMIN  #}
+		<div class="col-sm-3 col-md-2 sidebar">
+		  <ul class="nav nav-sidebar">
+			<li style="background-color:#30473f; color:white; padding:10px;">Abonnement</li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutAbonnement')}}">Ajouter un abonnement</a></li>
+			<li><a href="{{path('tonicmanagerAppBundle_listeAbonnement')}}">Vos abonnements</a></li>
+		  </ul>
+		  <ul class="nav nav-sidebar">
+			<li style="background-color:#30473f; color:white; padding:10px;">Option</li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutOption')}}">Ajouter une option</a></li>
+			<li><a href="{{path('tonicmanagerAppBundle_listeOption')}}">Vos options</a></li>
+		  </ul>
+		  <ul class="nav nav-sidebar">
+			<li style="background-color:#30473f; color:white; padding:10px;">Outils</li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Fréquentations</a></li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Statistique</a></li>
+		  </ul>
+		  <ul class="nav nav-sidebar">
+			<li style="background-color:#30473f; color:white; padding:10px;">Utilisateur</li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Ajouter un utilisateur</a></li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Vos utilisateurs</a></li>
+		  </ul>
+		  <ul class="nav nav-sidebar">
+			<li style="background-color:#30473f; color:white; padding:10px;">Contact</li>
+			<li><a href="{{path('tonicmanagerAppBundle_ajoutClient')}}">Contactez l'assistance</a></li>
+		  </ul>
+		</div>
+
+
+		<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+		  <h1 class="page-header">{% block TonicManagerAdminTitre_body %}{% endblock %}</h1>
+
+		  <div class="row placeholders">
+				{% block TonicManagerAdmin_body %}	
+				{% endblock %}	
+		  </div>
+		</div>
+	</div>
+</div>
+{% endblock %}

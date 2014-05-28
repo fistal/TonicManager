@@ -16,7 +16,7 @@ class __TwigTemplate_ddcd26f025b7e7762102493a0211c2e72fefea3ad725c5f5f6a19dfd0a7
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 1
-        $this->env->loadTemplate("TwigBundle:Exception:exception.xml.twig")->display(array_merge($context, array("exception" => (isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")))));
+        $this->env->loadTemplate("TwigBundle:Exception:exception.xml.twig")->display(array_merge($context, array("exception" => $this->getContext($context, "exception"))));
     }
 
     public function getTemplateName()

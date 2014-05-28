@@ -2,6 +2,9 @@
 tonicmanagerAppBundle_homepage:
     path: /
     defaults: { _controller: TonicmanagerAppBundle:Default:index }
+tonicmanagerAppBundle_admin:
+    path: /dashboard
+    defaults: { _controller: TonicmanagerAppBundle:Default:dashboard }
 tonicmanagerAppBundle_scanClient:
     path: /scanCarte
     defaults: { _controller: TonicmanagerAppBundle:Default:scanCarte }

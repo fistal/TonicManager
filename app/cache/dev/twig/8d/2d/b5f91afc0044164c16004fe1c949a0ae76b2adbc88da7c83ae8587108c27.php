@@ -41,11 +41,11 @@ class __TwigTemplate_8d2db5f91afc0044164c16004fe1c949a0ae76b2adbc88da7c83ae85871
     {
         // line 8
         echo "    ";
-        echo twig_escape_filter($this->env, $this->getAttribute((isset($context["exception"]) ? $context["exception"] : $this->getContext($context, "exception")), "message"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getAttribute($this->getContext($context, "exception"), "message"), "html", null, true);
         echo " (";
-        echo twig_escape_filter($this->env, (isset($context["status_code"]) ? $context["status_code"] : $this->getContext($context, "status_code")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "status_code"), "html", null, true);
         echo " ";
-        echo twig_escape_filter($this->env, (isset($context["status_text"]) ? $context["status_text"] : $this->getContext($context, "status_text")), "html", null, true);
+        echo twig_escape_filter($this->env, $this->getContext($context, "status_text"), "html", null, true);
         echo ")
 ";
     }
@@ -70,6 +70,6 @@ class __TwigTemplate_8d2db5f91afc0044164c16004fe1c949a0ae76b2adbc88da7c83ae85871
 
     public function getDebugInfo()
     {
-        return array (  57 => 12,  54 => 11,  43 => 8,  40 => 7,  33 => 4,  30 => 3,);
+        return array (  57 => 12,  54 => 11,  195 => 103,  187 => 98,  178 => 92,  169 => 86,  160 => 80,  151 => 74,  142 => 68,  133 => 62,  124 => 56,  115 => 50,  106 => 44,  97 => 38,  88 => 32,  79 => 26,  70 => 20,  61 => 14,  53 => 9,  43 => 8,  40 => 7,  33 => 4,  30 => 3,);
     }
 }

@@ -7,18 +7,18 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
     {
         parent::__construct($env);
 
-        $this->parent = $this->env->loadTemplate("::layout.html.twig");
+        $this->parent = $this->env->loadTemplate("TonicmanagerAppBundle::admin.html.twig");
 
         $this->blocks = array(
             'title' => array($this, 'block_title'),
-            'body' => array($this, 'block_body'),
-            'NasApp_body' => array($this, 'block_NasApp_body'),
+            'TonicManagerAdminTitre_body' => array($this, 'block_TonicManagerAdminTitre_body'),
+            'TonicManagerAdmin_body' => array($this, 'block_TonicManagerAdmin_body'),
         );
     }
 
     protected function doGetParent(array $context)
     {
-        return "::layout.html.twig";
+        return "TonicmanagerAppBundle::admin.html.twig";
     }
 
     protected function doDisplay(array $context, array $blocks = array())
@@ -37,19 +37,18 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
     }
 
     // line 6
-    public function block_body($context, array $blocks = array())
+    public function block_TonicManagerAdminTitre_body($context, array $blocks = array())
     {
-        // line 7
-        echo "\t";
-        $this->displayBlock('NasApp_body', $context, $blocks);
+        echo "Ajouter une option";
     }
 
-    public function block_NasApp_body($context, array $blocks = array())
+    // line 7
+    public function block_TonicManagerAdmin_body($context, array $blocks = array())
     {
         echo "\t
 \t\t\t <form method=\"post\" ";
         // line 8
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'enctype');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'enctype');
         echo ">
 \t\t\t\t<div class=\"panel panel-primary\">
 \t\t\t\t\t  <div class=\"panel-heading\">
@@ -62,7 +61,7 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"input-group-addon\">Libelle</span>
 \t\t\t\t\t\t\t\t\t\t\t";
         // line 18
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "libelle"), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "libelle"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -71,7 +70,7 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
 \t\t\t\t\t\t\t\t\t\t\t<span class=\"input-group-addon\">Prix</span>
 \t\t\t\t\t\t\t\t\t\t\t";
         // line 24
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "prix"), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "prix"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t\t</div>
@@ -81,7 +80,7 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
 \t\t\t\t</div>\t\t\t\t 
 \t\t\t ";
         // line 31
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'rest');
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'rest');
         echo "
 \t\t\t  <div class=\"form-group\">
 \t\t\t\t<div class=\"col-sm-offset-4 col-sm-10\">
@@ -89,7 +88,7 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
 \t\t\t\t</div>
 \t\t\t  </div> 
 \t\t\t </form>
-\t";
+";
     }
 
     public function getTemplateName()
@@ -104,6 +103,6 @@ class __TwigTemplate_a85769bd8bb57ffb100cd168c8a7cc1861113c37211233b6ff67576b9a6
 
     public function getDebugInfo()
     {
-        return array (  84 => 31,  74 => 24,  65 => 18,  52 => 8,  43 => 7,  40 => 6,  33 => 3,  30 => 2,);
+        return array (  83 => 31,  73 => 24,  64 => 18,  51 => 8,  46 => 7,  40 => 6,  33 => 3,  30 => 2,);
     }
 }

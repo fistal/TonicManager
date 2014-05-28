@@ -20,6 +20,11 @@ class DefaultController extends Controller
         return $this->render('TonicmanagerAppBundle:Default:index.html.twig');
     }
 
+    public function dashboardAction()
+    {
+        return $this->render('TonicmanagerAppBundle:Default:dashboard.html.twig');
+    }
+
     public function scanCarteAction()
     {	
 		$contrat = new Contrat();

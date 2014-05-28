@@ -1,34 +1,32 @@
-{% extends "::layout.html.twig" %}
+{% extends "TonicmanagerAppBundle::layout.html.twig" %}
 {% block title %}
 	{{ parent() }}
 {% endblock %}
 
-{% block body %}
-	{% block NasApp_body %}	
-		<div class="panel panel-primary">
-			  <div class="panel-heading">
-				<h3 class="panel-title">Vos clients <a href="{{path('tonicmanagerAppBundle_ajoutContrat')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a></h3>
-			  </div>
-			  <div class="panel-body">		
-				<table class="table table-hover" id="myTable">
-					<thead>
-					  <tr>
-						<th class="header">Nom</th>
-						<th class="header">Prénom</th>			
-						<th></th>
-					  </tr>
-					</thead>
-					<tbody>
-						{% for client in clients %}
-							<tr>
-								<td>{{client.nom}}</td>
-								<td>{{client.prenom}}</td>
-								<td><a class="btn btn-warning" href="{{path('tonicmanagerAppBundle_ficheContrat', {'idClient': client.id})}}">Editer</a></td>
-							</tr>
-						{% endfor %}
-					</tbody>
-				</table>					  
-			  </div>
-		</div>		
-	{% endblock %}
+{% block NasApp_body %}	
+	<div class="panel panel-primary">
+		  <div class="panel-heading">
+			<h3 class="panel-title">Vos clients <a href="{{path('tonicmanagerAppBundle_ajoutContrat')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span></a></h3>
+		  </div>
+		  <div class="panel-body">		
+			<table class="table table-hover" id="myTable">
+				<thead>
+				  <tr>
+					<th class="header">Nom</th>
+					<th class="header">Prénom</th>			
+					<th></th>
+				  </tr>
+				</thead>
+				<tbody>
+					{% for client in clients %}
+						<tr>
+							<td>{{client.nom}}</td>
+							<td>{{client.prenom}}</td>
+							<td><a class="btn btn-warning" href="{{path('tonicmanagerAppBundle_ficheContrat', {'idClient': client.id})}}">Editer</a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>					  
+		  </div>
+	</div>		
 {% endblock %}
