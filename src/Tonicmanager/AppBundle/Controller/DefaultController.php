@@ -8,6 +8,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Template;
 use Tonicmanager\AppBundle\Form\ScanCarteType;
 use Tonicmanager\AppBundle\Form\RechercheClientType;
 use Tonicmanager\AppBundle\Entity\Client;
+use Tonicmanager\AppBundle\Entity\Frequentation;
 use Tonicmanager\AppBundle\Entity\Contrat;
 use Tonicmanager\AppBundle\Form\ClientType;
 use Tonicmanager\AppBundle\Form\ConsultationType;
@@ -28,6 +29,7 @@ class DefaultController extends Controller
     public function scanCarteAction()
     {	
 		$contrat = new Contrat();
+		$frequentation = new Frequentation();
 		$form = $this->createForm(new ScanCarteType());
 		
 		//On récupère la requête
@@ -46,8 +48,14 @@ class DefaultController extends Controller
 							->getRepository('TonicmanagerAppBundle:Contrat');
 				
 
-				$TBcontrat = $repo->findByClient($data["id"]);				
+				$TBcontrat = $repo->findByClient($data["id"]);					
 				$contrat = $TBcontrat[0];				
+				
+				$frequentation->setClient($contrat->getClient());
+				$em = $this->getDoctrine()
+						->getManager();
+				$em->persist($frequentation);
+				$em->flush();
 				
 				return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('contrat'=>$contrat));
 			}			
@@ -90,6 +98,7 @@ class DefaultController extends Controller
 	public function rechercheClientAction()
     {
 		$contrat = new Contrat();
+		$frequentation = new Frequentation();
 		$form = $this->createForm(new RechercheClientType());
 		
 		//On récupère la requête
@@ -112,8 +121,14 @@ class DefaultController extends Controller
 				$TBclient = $em->getRepository('TonicmanagerAppBundle:Client')->findRechercheClient($nom, $dateNaissance);		
 				$client = $TBclient[0];	
 
-				$TBcontrat = $em->getRepository('TonicmanagerAppBundle:Contrat')->findByClient($client->getId());				
+				$TBcontrat = $em->getRepository('TonicmanagerAppBundle:Contrat')->findByClient($client->getId());	
 				$contrat = $TBcontrat[0];
+				
+				$frequentation->setClient($contrat->getClient());
+				$em = $this->getDoctrine()
+						->getManager();
+				$em->persist($frequentation);
+				$em->flush();
 			
 				return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('contrat'=>$contrat));
 			}

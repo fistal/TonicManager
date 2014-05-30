@@ -21,8 +21,8 @@ class ContratType extends AbstractType
 				'choices'=> array('espece'=>'Espece','cheque'=>'Cheque'),
 				'required'=> true))
             ->add('droitEntree', 'text')
-            ->add('dateStart', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
-            ->add('dateEnd', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
+            ->add('dateStart', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
+            ->add('dateEnd', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
             ->add('commentaire', 'textarea')
 			->add('client', new ClientType())
 			->add('banque', new BanqueType())

@@ -16,7 +16,7 @@ class RechercheClientType extends AbstractType
     {
         $builder
             ->add('nom', 'text')
-            ->add('dateNaissance', 'date', array('format' => 'd - M - y','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)));
+            ->add('dateNaissance', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)));
     }
     
 
