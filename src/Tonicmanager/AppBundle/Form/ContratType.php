@@ -19,6 +19,7 @@ class ContratType extends AbstractType
             ->add('incidentPaiement', 'text')
             ->add('modePaiement', 'choice', array(
 				'choices'=> array('espece'=>'Espece','cheque'=>'Cheque'),
+				'empty_value' => 'Choisissez une option',
 				'required'=> true))
             ->add('droitEntree', 'text')
             ->add('dateStart', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))

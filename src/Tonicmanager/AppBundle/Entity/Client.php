@@ -101,9 +101,23 @@ class Client
     /**
      * @var string
      *
-     * @ORM\Column(name="Photo", type="string", length=255)
+     * @ORM\Column(name="Photo", type="string", length=255, nullable=true)
      */
     private $photo;	
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prospect", type="string", length=255)
+     */
+    private $prospect;	
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dateProspect", type="date", length=255)
+     */
+    private $dateProspect;	
 
 
     /**
@@ -418,5 +432,51 @@ class Client
     public function getCivilite()
     {
         return $this->civilite;
+    }
+
+    /**
+     * Set prospect
+     *
+     * @param string $prospect
+     * @return Client
+     */
+    public function setProspect($prospect)
+    {
+        $this->prospect = $prospect;
+    
+        return $this;
+    }
+
+    /**
+     * Get prospect
+     *
+     * @return string 
+     */
+    public function getProspect()
+    {
+        return $this->prospect;
+    }
+
+    /**
+     * Set dateProspect
+     *
+     * @param string $dateProspect
+     * @return Client
+     */
+    public function setDateProspect($dateProspect)
+    {
+        $this->dateProspect = $dateProspect;
+    
+        return $this;
+    }
+
+    /**
+     * Get dateProspect
+     *
+     * @return string 
+     */
+    public function getDateProspect()
+    {
+        return $this->dateProspect;
     }
 }

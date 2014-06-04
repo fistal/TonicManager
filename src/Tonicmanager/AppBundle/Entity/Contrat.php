@@ -17,19 +17,22 @@ class Contrat
 	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Client",cascade={"persist"})
 	 */
 	private $client;
+	
 	/**
 	 * @ORM\OneToOne(targetEntity="Tonicmanager\AppBundle\Entity\Banque",cascade={"persist"})
 	 * @ORM\JoinColumn(nullable=true)
 	 */
 	private $banque;
+	
 	/**
 	 * @ORM\ManyToOne(targetEntity="Tonicmanager\AppBundle\Entity\Abonnement")
-	 * @ORM\JoinColumn(nullable=false)
+	 * @ORM\JoinColumn(nullable=true)
 	 */
 	private $abonnement;
+	
 	/**
 	 * @ORM\ManyToMany(targetEntity="Tonicmanager\AppBundle\Entity\Supp",cascade={"persist"})
-	 * @ORM\JoinColumn(nullable=false)
+	 * @ORM\JoinColumn(nullable=true)
 	 */
 	private $Supp;
 
@@ -52,49 +55,49 @@ class Contrat
     /**
      * @var integer
      *
-     * @ORM\Column(name="ClientDoit", type="integer")
+     * @ORM\Column(name="ClientDoit", type="integer", nullable=true)
      */
     private $clientDoit;
 
     /**
      * @var boolean
      *
-     * @ORM\Column(name="IncidentPaiement", type="boolean")
+     * @ORM\Column(name="IncidentPaiement", type="boolean", nullable=true)
      */
     private $incidentPaiement;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="ModePaiement", type="string", length=255)
+     * @ORM\Column(name="ModePaiement", type="string", length=255, nullable=true)
      */
     private $modePaiement;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="DroitEntree", type="string", length=255)
+     * @ORM\Column(name="DroitEntree", type="string", length=255, nullable=true)
      */
     private $droitEntree;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DateStart", type="date")
+     * @ORM\Column(name="DateStart", type="date", nullable=true)
      */
     private $dateStart;
 
     /**
      * @var \DateTime
      *
-     * @ORM\Column(name="DateEnd", type="date")
+     * @ORM\Column(name="DateEnd", type="date", nullable=true)
      */
     private $dateEnd;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Commentaire", type="text")
+     * @ORM\Column(name="Commentaire", type="text", nullable=true)
      */
     private $commentaire;
 

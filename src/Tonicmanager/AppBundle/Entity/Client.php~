@@ -104,6 +104,20 @@ class Client
      * @ORM\Column(name="Photo", type="string", length=255)
      */
     private $photo;	
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="prospect", type="string", length=255)
+     */
+    private $prospect;	
+	
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="dateProspect", type="string", length=255)
+     */
+    private $dateProspect;	
 
 
     /**
@@ -395,5 +409,28 @@ class Client
     public function getLieuNaissance()
     {
         return $this->lieuNaissance;
+    }
+
+    /**
+     * Set civilite
+     *
+     * @param string $civilite
+     * @return Client
+     */
+    public function setCivilite($civilite)
+    {
+        $this->civilite = $civilite;
+    
+        return $this;
+    }
+
+    /**
+     * Get civilite
+     *
+     * @return string 
+     */
+    public function getCivilite()
+    {
+        return $this->civilite;
     }
 }

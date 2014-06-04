@@ -24,49 +24,49 @@ class Banque
     /**
      * @var string
      *
-     * @ORM\Column(name="NomBeneficiare", type="string", length=255)
+     * @ORM\Column(name="NomBeneficiare", type="string", length=255, nullable=true)
      */
     private $nomBeneficiare;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Titulaire", type="string", length=255)
+     * @ORM\Column(name="Titulaire", type="string", length=255, nullable=true)
      */
     private $titulaire;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Nom", type="string", length=255)
+     * @ORM\Column(name="Nom", type="string", length=255, nullable=true)
      */
     private $nom;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Adresse", type="string", length=255)
+     * @ORM\Column(name="Adresse", type="string", length=255, nullable=true)
      */
     private $adresse;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Cp", type="string", length=255)
+     * @ORM\Column(name="Cp", type="string", length=255, nullable=true)
      */
     private $cp;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Ville", type="string", length=255)
+     * @ORM\Column(name="Ville", type="string", length=255, nullable=true)
      */
     private $ville;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="Iban", type="string", length=255)
+     * @ORM\Column(name="Iban", type="string", length=255, nullable=true)
      */
     private $iban;
 

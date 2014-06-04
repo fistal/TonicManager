@@ -28,7 +28,13 @@ class ClientType extends AbstractType
             ->add('adresse', 'text')
             ->add('ville', 'text')
             ->add('cp', 'text')	
-            ->add('photo', 'file')			
+            ->add('photo', 'file', array(
+						'required'=>false))			
+            ->add('prospect', 'choice', array(
+						'choices'=>array('oui'=>'Oui', 'non'=>'Non'),
+						'required'=>true,
+						'empty_value' => 'Choisissez une option'))			
+            ->add('dateProspect', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))			
         ;
     }
     

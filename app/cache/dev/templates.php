@@ -86,6 +86,7 @@
   'TonicmanagerAppBundle:Contrat:ajouter.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Contrat/ajouter.html.twig',
   'TonicmanagerAppBundle:Contrat:fiche.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Contrat/fiche.html.twig',
   'TonicmanagerAppBundle:Default:consultation.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Default/consultation.html.twig',
+  'TonicmanagerAppBundle:Default:dashboard.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Default/dashboard.html.twig',
   'TonicmanagerAppBundle:Default:index.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Default/index.html.twig',
   'TonicmanagerAppBundle:Default:rechercheClient.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Default/rechercheClient.html.twig',
   'TonicmanagerAppBundle:Default:scanCarte.html.twig' => 'C:\\wamp\\www\\TonicManager\\src\\Tonicmanager\\AppBundle/Resources/views/Default/scanCarte.html.twig',

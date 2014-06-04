@@ -3,7 +3,7 @@
 	{{ parent() }}
 {% endblock %}
 
-{% block body %}
+
 	{% block NasApp_body %}	
 		
 		
@@ -16,9 +16,11 @@
 		<div class="row">
 		  <div class="col-sm-6 col-md-4">
 			<div class="thumbnail">
-				<img src="/TonicManager/web/uploads/img/{{contrat.client.photo}}">
+				{% if contrat.client.photo != "" %}
+					<img src="/TonicManager/web/uploads/img/{{contrat.client.photo}}">
+				{% endif %}
 			  <div class="caption">
-				<h3>Information client</h3>
+				<h3>Informations client</h3>
 				<p>
 				
 				
@@ -57,9 +59,9 @@
 			</div>
 		  </div>
 		  <div class="col-sm-12 col-md-8">
-				<h3>Information contrat</h3>
+				<h3>Informations contrat</h3>
 				<p>
-					Abonnement : {{contrat.abonnement.type}}<br><br>
+					Abonnement : {% if contrat.abonnement.type is defined %}{{contrat.abonnement.type}} {% endif %}<br><br>
 					Date de début : {{contrat.dateStart|date('d - m - Y')}}<br><br>
 					Date de fin : {{contrat.dateEnd|date('d - m - Y')}}<br><br>
 					Mode de paiement : {{contrat.modePaiement}}<br><br>
@@ -73,4 +75,3 @@
 		
 		
 	{% endblock %}
-{% endblock %}

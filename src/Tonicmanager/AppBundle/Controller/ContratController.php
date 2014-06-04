@@ -43,7 +43,8 @@ class ContratController extends Controller
 	}
 	
 	public function ficheAction($idClient)
-	{
-		return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('idClient'=>$idClient));
+	{		
+		$contrat = $this->getDoctrine()->getManager()->getRepository('TonicmanagerAppBundle:Contrat')->findOneByClient($idClient);
+		return $this->render('TonicmanagerAppBundle:Contrat:fiche.html.twig', array('contrat'=>$contrat));
 	}
 }
