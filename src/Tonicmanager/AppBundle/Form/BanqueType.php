@@ -22,6 +22,7 @@ class BanqueType extends AbstractType
             ->add('cp')
             ->add('ville')
             ->add('iban')
+            ->add('bic')
         ;
     }
     

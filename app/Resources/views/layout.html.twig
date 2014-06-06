@@ -13,59 +13,24 @@
     
 	{% block stylesheets %}
 	  
-    <link href="{{ asset('dist/css/bootstrap-theme.css') }}" rel="stylesheet">
-	<link href="{{ asset('dist/css/bootstrap.min.css') }}" rel="stylesheet">			
+    
+	<link href="{{ asset('dist/css/bootstrap.min.css') }}" rel="stylesheet">
+	<link href="{{ asset('dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" media="screen">	
 	<link href="{{ asset('dist/css/dashboard.css') }}" rel="stylesheet">
-	<link href="{{ asset('dist/css/theme.css') }}" rel="stylesheet">			
-	<link href="{{ asset('dist/css/jquery-ui.css') }}" rel="stylesheet">			
-	<link href="{{ asset('dist/css/docs.min.css') }}" rel="stylesheet">			
+	<link href="{{ asset('dist/css/theme.css') }}" rel="stylesheet">	
+	
+	{# <link href="{{ asset('dist/css/jquery-ui.css') }}" rel="stylesheet"> #}		
+	{# <link href="{{ asset('dist/css/docs.min.css') }}" rel="stylesheet">	#}		
+	{# <link href="{{ asset('dist/css/bootstrap-theme.css') }}" rel="stylesheet">		#}		
 				
 	{% endblock %}
 	
 	{% block javascripts %}
-	<script type="text/javascript" src="{{ asset('dist/js/bootstrap-datepicker.js') }}"></script>
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>   
-	<script type="text/javascript" src="{{ asset('dist/js/bootstrap.min.js') }}"></script>	
-	<script type="text/javascript" src="{{ asset('dist/js/docs.min.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('dist/js/jquery-1.9.1.js') }}"></script>
-	<script type="text/javascript" src="{{ asset('dist/js/jquery-ui.js') }}"></script>
-	<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-	<script type="text/javascript" src="{{ asset('dist/js/bootstrap-tooltip.js') }}"></script>
+
 	
-	
-	<script type="text/javascript" src="{{ asset('dist/js/jquery.tablesorter.min.js') }}"></script>		
-    <script language="JavaScript">
-		$(function() {		
-		$("#myTable").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
-		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
-		});
-        function imprime_zone(titre, obj) {
-            // Définie la zone à imprimer
-            var zi = document.getElementById(obj).innerHTML;
-
-            // Ouvre une nouvelle fenetre
-            var f = window.open("", "ZoneImpr", "height=1000, width=1000,toolbar=0, menubar=0, scrollbars=1, resizable=1,status=0, location=0, left=10, top=10");
-
-            // Définit le Style de la page
-            f.document.body.style.color = '#000000';
-            f.document.body.style.backgroundColor = '#FFFFFF';
-            f.document.body.style.padding = "10px";
-
-            // Ajoute les Données
-            f.document.title = "";
-            f.document.body.innerHTML += " " + zi + " ";
-
-            // Imprime et ferme la fenetre
-            f.window.print();
-            f.window.close();
-            return true;
-        }
-		
-		
-		
-
-	</script>	
+	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
 	{% endblock %}
+	
 
   </head>
 
@@ -130,6 +95,53 @@
     <!-- Placed at the end of the document so the pages load faster -->
 	
 
+
+
+	
+	
+	<script type="text/javascript" src="{{ asset('dist/js/bootstrap.min.js') }}" ></script>				
+	<script type="text/javascript" src="{{ asset('dist/js/bootstrap-datepicker.js') }}" charset="UTF-8"></script>
+	<script type="text/javascript" src="{{ asset('dist/js/bootstrap-datetimepicker.fr.js') }}" charset="UTF-8"></script>
+
+	
+	
+	{# <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>   #}	
+	{#<script type="text/javascript" src="{{ asset('dist/js/docs.min.js') }}"></script>#}
+	{#<script type="text/javascript" src="{{ asset('dist/js/jquery-1.9.1.js') }}"></script>#}
+	{#<script type="text/javascript" src="{{ asset('dist/js/jquery-ui.js') }}"></script>#}
+	{#<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>#}
+	{#<script type="text/javascript" src="{{ asset('dist/js/bootstrap-tooltip.js') }}"></script>#}
+	
+	
+	
+	<script type="text/javascript" src="{{ asset('dist/js/jquery.tablesorter.min.js') }}"></script>		
+    <script language="JavaScript">
+		$(function() {		
+		$("#myTable").tablesorter({sortList:[[0,0],[2,1]], widgets: ['zebra']});
+		$("#options").tablesorter({sortList: [[0,0]], headers: { 3:{sorter: false}, 4:{sorter: false}}});
+		});
+        function imprime_zone(titre, obj) {
+            // Définie la zone à imprimer
+            var zi = document.getElementById(obj).innerHTML;
+
+            // Ouvre une nouvelle fenetre
+            var f = window.open("", "ZoneImpr", "height=1000, width=1000,toolbar=0, menubar=0, scrollbars=1, resizable=1,status=0, location=0, left=10, top=10");
+
+            // Définit le Style de la page
+            f.document.body.style.color = '#000000';
+            f.document.body.style.backgroundColor = '#FFFFFF';
+            f.document.body.style.padding = "10px";
+
+            // Ajoute les Données
+            f.document.title = "";
+            f.document.body.innerHTML += " " + zi + " ";
+
+            // Imprime et ferme la fenetre
+            f.window.print();
+            f.window.close();
+            return true;
+        }
+	</script>	
 	
   </body>
 </html>

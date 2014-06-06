@@ -14,20 +14,20 @@
 		<div class="row">
 			<div class="col-xs-2">
 				<div class="input-group">
-					<span class="input-group-addon">Civilité</span>
+					<span class="input-group-addon">Civilité <span style="color:red;">*</span></span>
 					{{ form_widget(form.client.civilite,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>		
 			<div class="col-xs-5">
 				<div class="input-group">
-					<span class="input-group-addon">Nom</span>
+					<span class="input-group-addon">Nom <span style="color:red;">*</span></span>
 					{{ form_widget(form.client.nom,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>
 			<div class="col-xs-5">
 				<div class="input-group">
 					<span class="input-group-addon">
-						prénom
+						Prénom <span style="color:red;">*</span>
 					</span>
 					{{ form_widget(form.client.prenom,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
@@ -37,19 +37,19 @@
 		<div class="row">
 			<div class="col-xs-6">
 				<div class="input-group">
-					<span class="input-group-addon">Adresse</span>
+					<span class="input-group-addon">Adresse <span style="color:red;">*</span></span>
 					{{ form_widget(form.client.adresse,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>	
 			<div class="col-xs-4">
 				<div class="input-group">
-					<span class="input-group-addon">Ville</span>
+					<span class="input-group-addon">Ville <span style="color:red;">*</span></span>
 					{{ form_widget(form.client.ville,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>
 			<div class="col-xs-2">
 				<div class="input-group">
-					<span class="input-group-addon">Cp</span>
+					<span class="input-group-addon">Cp <span style="color:red;">*</span></span>
 					{{ form_widget(form.client.cp,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>	
@@ -59,7 +59,7 @@
 			<div class="col-xs-6">
 				<div class="input-group">
 					<span class="input-group-addon">
-						Date de naissance
+						Date de naissance <span style="color:red;">*</span>
 					</span>
 					{{ form_widget(form.client.dateNaissance,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
@@ -67,7 +67,7 @@
 			<div class="col-xs-6">
 				<div class="input-group">
 					<span class="input-group-addon">
-						Lieu de naissance
+						Lieu de naissance <span style="color:red;">*</span>
 					</span>
 					{{ form_widget(form.client.lieuNaissance,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
@@ -92,7 +92,7 @@
 			<div class="col-xs-3">
 				<div class="input-group">
 					<span class="input-group-addon">
-						Portable
+						Portable <span style="color:red;">*</span>
 					</span>
 					{{ form_widget(form.client.portable,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
@@ -116,7 +116,7 @@
 	</div>
 </div>	
 
-<div class="panel panel-primary">
+<div class="panel panel-primary" id="prospect">
 	<div class="panel-heading">
 		<h3 class="panel-title">Prospect</h3>
 	</div>	
@@ -124,7 +124,7 @@
 		<div class="row">
 			<div class="col-xs-4">
 				<div class="input-group">
-					<span class="input-group-addon">Prospect</span>
+					<span class="input-group-addon">Prospect <span style="color:red;">*</span></span>
 					{{ form_widget(form.client.prospect,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>	
@@ -159,7 +159,7 @@
 			</div>									
 		</div>
 		<br>
-		<div class="row">					
+		<div class="row" id="dateDial">					
 			<div class="col-xs-6">
 				<div class="input-group">
 					<span class="input-group-addon">Mode de paiement</span>
@@ -167,9 +167,11 @@
 				</div>
 			</div>					
 			<div class="col-xs-6">
-				<div class="input-group">
+				<div class="input-group" id="dateFin">
 					<span class="input-group-addon">Date de fin</span>
+					<div class="datepicker">
 					{{ form_widget(form.dateEnd,  { 'attr': {'class': 'form-control'}}) }}
+					</div>
 				</div>
 			</div>
 		</div>
@@ -197,9 +199,14 @@
 				</div>
 			</div>	
 			<div class="col-xs-6">
-				<div class="alert alert-info">
-					<strong>Option :</strong> <br>{{ form_widget(form.supp,  { 'attr': {'class': ''}}) }}
-				</div>
+<div class="panel panel-info">
+      <div class="panel-heading">
+        <h3 class="panel-title">Option</h3>
+      </div>
+      <div class="panel-body">
+        {{ form_widget(form.supp,  { 'attr': {'class': 'checkBox'}}) }}
+      </div>
+    </div>
 			</div>
 		</div>
 	</div>
@@ -257,12 +264,18 @@
 		</div>
 		<br>
 		<div class="row">
-			<div class="col-xs-12">
+			<div class="col-xs-6">
 				<div class="input-group">
 					<span class="input-group-addon">IBAN</span>
 					{{ form_widget(form.banque.iban,  { 'attr': {'class': 'form-control'}}) }}
 				</div>
 			</div>
+			<div class="col-xs-6">
+				<div class="input-group">
+					<span class="input-group-addon">BIC</span>
+					{{ form_widget(form.banque.bic,  { 'attr': {'class': 'form-control'}}) }}
+				</div>
+			</div>			
 		</div>
 	</div>
 </div>			 
@@ -279,34 +292,31 @@
 
 <script type="text/javascript">
     // keep track of how many email fields have been rendered
+	jQuery(document).ready(function() {
+		$( "#tonicmanager_appbundle_contrat_client_prospect" ).change(function() {
+		  var prospect = $( "#tonicmanager_appbundle_contrat_client_prospect option:selected").val();
+		  if(prospect == 'oui')
+		  {
+			$('#infoBanque').hide();
+			$('#infoAbo').hide();
+			$('#infoAbo :input').removeAttr('required');
+			$('#infoBanque :input').removeAttr('required');
+		  }
+		  else
+		  {
+			$('#infoBanque').show();
+			$('#infoAbo').show();
+			$('#infoAbo :input').attr('required', 'required');
+			$('#infoBanque :input').attr('required', 'required');
+		  }
+		});
+		
+		jQuery('.datepicker').datepicker();
+	})
 
-
-    jQuery(document).ready(function() {
-	
-	
-$( "#tonicmanager_appbundle_contrat_client_prospect" ).change(function() {
-  var prospect = $( "#tonicmanager_appbundle_contrat_client_prospect option:selected").val();
-  if(prospect == 'oui')
-  {
-	$('#infoBanque').hide();
-	$('#infoAbo').hide();
-	$('#infoAbo :input').removeAttr('required');
-	$('#infoBanque :input').removeAttr('required');
-
-  }
-  else
-  {
-	$('#infoBanque').show();
-	$('#infoAbo').show();
-	$('#infoAbo :input').attr('required', 'required');
-	$('#infoBanque :input').attr('required', 'required');
-  }
-});
-	
-
-				
-
-    })
+		
 </script>
+
+
 
 {% endblock %}

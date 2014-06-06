@@ -17,11 +17,14 @@ class ClientType extends AbstractType
         $builder
             ->add('civilite', 'choice', array(
 				'choices'=> array('Mr'=>'Mr','Mme'=>'Mme','Mlle'=>'Mlle'),
-				'required'=> true))
+				'required'=> true,
+				'empty_value' => '...'))
             ->add('nom', 'text')
             ->add('prenom', 'text')
-            ->add('email', 'text')
-            ->add('telephone', 'text')
+            ->add('email', 'text', array(
+									'required'=>false))
+            ->add('telephone', 'text', array(
+									'required'=>false))
             ->add('portable', 'text')
             ->add('dateNaissance', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
             ->add('lieuNaissance', 'text')

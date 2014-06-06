@@ -41,13 +41,14 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 \t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 24
+        // line 27
         echo "\t
 \t";
-        // line 25
+        // line 28
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 69
-        echo "
+        // line 33
+        echo "\t
+
   </head>
 
   <body>
@@ -67,12 +68,12 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
           <ul class=\"nav navbar-nav\">
 \t\t  <li>
 \t\t\t<img src=\"";
-        // line 88
+        // line 53
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/images/tonicmanager.png"), "html", null, true);
         echo "\" style=\"width:90px;\">
 \t\t  </li>
             <li><a href=\"";
-        // line 90
+        // line 55
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_homepage");
         echo "\"><span class=\"icon-home\" ></span> Accueil</a></li>
 \t\t\t
@@ -80,18 +81,18 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Client <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 95
+        // line 60
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutContrat");
         echo "\">Nouveau clients</a></li>
                 <li><a href=\"";
-        // line 96
+        // line 61
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeClient");
         echo "\">Liste des clients</a></li>
                 <li><a href=\"#\">Rechercher un client</a></li>
               </ul>
             </li>
 \t\t\t<li><a href=\"";
-        // line 100
+        // line 65
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_admin");
         echo "\"><span class=\"glyphicon glyphicon-cog\" ></span> Admin</a></li>\t\t\t
           </ul>
@@ -99,21 +100,21 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
             <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">
           </form>
 \t\t\t";
-        // line 105
+        // line 70
         $this->displayBlock('printDevis', $context, $blocks);
-        // line 108
+        // line 73
         echo "        </div><!--/.nav-collapse -->
       </div>
 </div>
 \t
 <!-- Main jumbotron for a primary marketing message or call to action -->
 \t  \t";
-        // line 113
+        // line 78
         $this->displayBlock('titleAction', $context, $blocks);
-        // line 115
+        // line 80
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 117
+        // line 82
         echo "\t
 \t
 \t<div id=\"footer\">
@@ -130,84 +131,43 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
     <!-- Placed at the end of the document so the pages load faster -->
 \t
 
+
+
 \t
-  </body>
-</html>
-";
-    }
-
-    // line 12
-    public function block_title($context, array $blocks = array())
-    {
-        echo " Tonic Manager ";
-    }
-
-    // line 14
-    public function block_stylesheets($context, array $blocks = array())
-    {
-        // line 15
-        echo "\t  
-    <link href=\"";
-        // line 16
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/bootstrap-theme.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">
-\t<link href=\"";
-        // line 17
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/bootstrap.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">\t\t\t
-\t<link href=\"";
-        // line 18
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/dashboard.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">
-\t<link href=\"";
-        // line 19
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/theme.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">\t\t\t
-\t<link href=\"";
-        // line 20
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/jquery-ui.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">\t\t\t
-\t<link href=\"";
-        // line 21
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/docs.min.css"), "html", null, true);
-        echo "\" rel=\"stylesheet\">\t\t\t
-\t\t\t\t
-\t";
-    }
-
-    // line 25
-    public function block_javascripts($context, array $blocks = array())
-    {
-        // line 26
-        echo "\t<script type=\"text/javascript\" src=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap-datepicker.js"), "html", null, true);
-        echo "\"></script>
-\t<script src=\"https://code.jquery.com/jquery-1.10.2.min.js\"></script>   
+\t
 \t<script type=\"text/javascript\" src=\"";
-        // line 28
+        // line 102
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap.min.js"), "html", null, true);
-        echo "\"></script>\t
+        echo "\" ></script>\t\t\t\t
 \t<script type=\"text/javascript\" src=\"";
-        // line 29
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/docs.min.js"), "html", null, true);
-        echo "\"></script>
+        // line 103
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap-datepicker.js"), "html", null, true);
+        echo "\" charset=\"UTF-8\"></script>
 \t<script type=\"text/javascript\" src=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/jquery-1.9.1.js"), "html", null, true);
-        echo "\"></script>
-\t<script type=\"text/javascript\" src=\"";
-        // line 31
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/jquery-ui.js"), "html", null, true);
-        echo "\"></script>
-\t<script type=\"text/javascript\" src=\"http://platform.twitter.com/widgets.js\"></script>
-\t<script type=\"text/javascript\" src=\"";
-        // line 33
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap-tooltip.js"), "html", null, true);
-        echo "\"></script>
+        // line 104
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap-datetimepicker.fr.js"), "html", null, true);
+        echo "\" charset=\"UTF-8\"></script>
+
+\t
+\t
+\t";
+        // line 108
+        echo "\t
+\t";
+        // line 110
+        echo "\t";
+        // line 111
+        echo "\t";
+        // line 112
+        echo "\t";
+        // line 113
+        echo "\t";
+        // line 114
+        echo "\t
 \t
 \t
 \t<script type=\"text/javascript\" src=\"";
-        // line 36
+        // line 117
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/jquery.tablesorter.min.js"), "html", null, true);
         echo "\"></script>\t\t
     <script language=\"JavaScript\">
@@ -236,33 +196,84 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
             f.window.close();
             return true;
         }
-\t\t
-\t\t
-\t\t
-
 \t</script>\t
+\t
+  </body>
+</html>
+";
+    }
+
+    // line 12
+    public function block_title($context, array $blocks = array())
+    {
+        echo " Tonic Manager ";
+    }
+
+    // line 14
+    public function block_stylesheets($context, array $blocks = array())
+    {
+        // line 15
+        echo "\t  
+    
+\t<link href=\"";
+        // line 17
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/bootstrap.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+\t<link href=\"";
+        // line 18
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/bootstrap-datetimepicker.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" media=\"screen\">\t
+\t<link href=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/dashboard.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">
+\t<link href=\"";
+        // line 20
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/theme.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\">\t
+\t
+\t";
+        // line 22
+        echo "\t\t
+\t";
+        // line 23
+        echo "\t\t
+\t";
+        // line 24
+        echo "\t\t
+\t\t\t\t
 \t";
     }
 
-    // line 105
+    // line 28
+    public function block_javascripts($context, array $blocks = array())
+    {
+        // line 29
+        echo "
+\t
+\t<script src=\"https://code.jquery.com/jquery-1.10.2.min.js\"></script>
+\t";
+    }
+
+    // line 70
     public function block_printDevis($context, array $blocks = array())
     {
-        // line 106
+        // line 71
         echo "\t\t
 \t\t\t";
     }
 
-    // line 113
+    // line 78
     public function block_titleAction($context, array $blocks = array())
     {
-        // line 114
+        // line 79
         echo "\t\t";
     }
 
-    // line 115
+    // line 80
     public function block_body($context, array $blocks = array())
     {
-        // line 116
+        // line 81
         echo "\t\t";
     }
 
@@ -278,6 +289,6 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 
     public function getDebugInfo()
     {
-        return array (  266 => 116,  263 => 115,  259 => 114,  256 => 113,  251 => 106,  248 => 105,  211 => 36,  205 => 33,  200 => 31,  192 => 29,  188 => 28,  172 => 21,  160 => 18,  152 => 16,  146 => 14,  84 => 95,  76 => 90,  114 => 115,  97 => 33,  90 => 29,  53 => 13,  34 => 3,  480 => 162,  474 => 161,  469 => 158,  461 => 155,  457 => 153,  453 => 151,  444 => 149,  440 => 148,  437 => 147,  435 => 146,  430 => 144,  427 => 143,  423 => 142,  413 => 134,  409 => 132,  407 => 131,  402 => 130,  398 => 129,  393 => 126,  387 => 122,  384 => 121,  381 => 120,  379 => 119,  374 => 116,  368 => 112,  365 => 111,  362 => 110,  360 => 109,  355 => 106,  341 => 105,  337 => 103,  322 => 101,  314 => 99,  312 => 98,  309 => 97,  305 => 95,  298 => 91,  294 => 90,  285 => 89,  283 => 88,  278 => 86,  268 => 85,  264 => 84,  258 => 81,  252 => 80,  247 => 78,  241 => 77,  229 => 73,  220 => 70,  214 => 69,  177 => 65,  169 => 60,  140 => 12,  132 => 51,  128 => 42,  107 => 36,  61 => 13,  273 => 96,  269 => 94,  254 => 92,  243 => 88,  240 => 86,  238 => 85,  235 => 74,  230 => 82,  227 => 81,  224 => 71,  221 => 77,  219 => 76,  217 => 75,  208 => 68,  204 => 72,  179 => 25,  159 => 61,  143 => 56,  135 => 53,  119 => 42,  102 => 32,  71 => 88,  67 => 15,  63 => 15,  59 => 14,  38 => 12,  94 => 28,  89 => 20,  85 => 25,  75 => 23,  68 => 19,  56 => 9,  87 => 25,  21 => 2,  26 => 6,  93 => 28,  88 => 96,  78 => 21,  46 => 7,  27 => 4,  44 => 7,  31 => 2,  28 => 3,  201 => 92,  196 => 30,  183 => 82,  171 => 61,  166 => 71,  163 => 62,  158 => 67,  156 => 17,  151 => 63,  142 => 59,  138 => 54,  136 => 56,  121 => 46,  117 => 117,  105 => 108,  91 => 27,  62 => 23,  49 => 19,  24 => 4,  25 => 1,  19 => 1,  79 => 24,  72 => 16,  69 => 25,  47 => 9,  40 => 6,  37 => 10,  22 => 2,  246 => 90,  157 => 56,  145 => 46,  139 => 45,  131 => 52,  123 => 39,  120 => 40,  115 => 43,  111 => 37,  108 => 36,  101 => 32,  98 => 31,  96 => 31,  83 => 31,  74 => 14,  66 => 15,  55 => 15,  52 => 21,  50 => 69,  43 => 14,  41 => 6,  35 => 5,  32 => 4,  29 => 3,  209 => 82,  203 => 78,  199 => 67,  193 => 73,  189 => 71,  187 => 84,  182 => 26,  176 => 64,  173 => 65,  168 => 20,  164 => 19,  162 => 57,  154 => 58,  149 => 15,  147 => 58,  144 => 49,  141 => 48,  133 => 55,  130 => 41,  125 => 44,  122 => 43,  116 => 41,  112 => 113,  109 => 34,  106 => 39,  103 => 105,  99 => 31,  95 => 100,  92 => 21,  86 => 28,  82 => 22,  80 => 19,  73 => 24,  64 => 18,  60 => 6,  57 => 14,  54 => 10,  51 => 8,  48 => 25,  45 => 24,  42 => 7,  39 => 9,  36 => 5,  33 => 3,  30 => 2,);
+        return array (  277 => 81,  274 => 80,  270 => 79,  267 => 78,  262 => 71,  259 => 70,  252 => 29,  249 => 28,  243 => 24,  240 => 23,  237 => 22,  232 => 20,  228 => 19,  224 => 18,  220 => 17,  216 => 15,  213 => 14,  207 => 12,  171 => 117,  166 => 114,  164 => 113,  162 => 112,  160 => 111,  158 => 110,  155 => 108,  148 => 104,  144 => 103,  140 => 102,  118 => 82,  115 => 80,  113 => 78,  106 => 73,  104 => 70,  96 => 65,  89 => 61,  85 => 60,  77 => 55,  72 => 53,  50 => 33,  48 => 28,  45 => 27,  43 => 14,  38 => 12,  25 => 1,);
     }
 }

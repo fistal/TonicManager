@@ -23,8 +23,9 @@ class ContratType extends AbstractType
 				'required'=> true))
             ->add('droitEntree', 'text')
             ->add('dateStart', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
-            ->add('dateEnd', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
-            ->add('commentaire', 'textarea')
+            ->add('dateEnd',  'text')
+            ->add('commentaire', 'textarea', array(
+			'required'=>false))
 			->add('client', new ClientType())
 			->add('banque', new BanqueType())
 			->add('abonnement', 'entity', array(
@@ -37,9 +38,12 @@ class ContratType extends AbstractType
 				'property' => 'libelle',
 				'empty_value' => 'Choisissez une option',
 				'expanded' => true,
-				'multiple' => true))			
+				'multiple' => true	
+				))
         ;
     }
+	
+	
     
     /**
      * @param OptionsResolverInterface $resolver

@@ -70,6 +70,13 @@ class Banque
      */
     private $iban;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Bic", type="string", length=255, nullable=true)
+     */
+    private $bic;
+
 
     /**
      * Get id
@@ -240,5 +247,28 @@ class Banque
     public function getIban()
     {
         return $this->iban;
+    }
+
+    /**
+     * Set bic
+     *
+     * @param string $bic
+     * @return Banque
+     */
+    public function setBic($bic)
+    {
+        $this->bic = $bic;
+    
+        return $this;
+    }
+
+    /**
+     * Get bic
+     *
+     * @return string 
+     */
+    public function getBic()
+    {
+        return $this->bic;
     }
 }
