@@ -38,4 +38,7 @@ tonicmanagerAppBundle_ajoutContrat:
 tonicmanagerAppBundle_ficheContrat:
     path: /ficheContrat/{idClient}
     defaults: { _controller: TonicmanagerAppBundle:Contrat:fiche }
+tonicmanagerAppBundle_editContrat:
+    path: /editContrat/{idContrat}
+    defaults: { _controller: TonicmanagerAppBundle:Contrat:edit }
 

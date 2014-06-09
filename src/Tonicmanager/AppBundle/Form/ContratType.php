@@ -22,8 +22,12 @@ class ContratType extends AbstractType
 				'empty_value' => 'Choisissez une option',
 				'required'=> true))
             ->add('droitEntree', 'text')
-            ->add('dateStart', 'date', array('format' => 'dd / MM / yyyy','pattern' => "{{ day }} / {{ month }} / {{ year }}", 'years' => range(date('Y'), date('Y') - 100)))
-            ->add('dateEnd',  'text')
+            ->add('dateStart', 'datetime',array('required' => false,
+                                                      'widget' =>'single_text',
+                                                      'format' =>'dd/MM/yyyy'))
+            ->add('dateEnd',  'datetime',array('required' => false,
+                                                      'widget' =>'single_text',
+                                                      'format' =>'dd/MM/yyyy'))
             ->add('commentaire', 'textarea', array(
 			'required'=>false))
 			->add('client', new ClientType())
@@ -38,7 +42,8 @@ class ContratType extends AbstractType
 				'property' => 'libelle',
 				'empty_value' => 'Choisissez une option',
 				'expanded' => true,
-				'multiple' => true	
+				'multiple' => true,
+				'required'=> false
 				))
         ;
     }

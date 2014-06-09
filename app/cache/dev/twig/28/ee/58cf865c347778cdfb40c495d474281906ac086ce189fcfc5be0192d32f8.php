@@ -242,7 +242,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t\t<span class=\"input-group-addon\">Date de debut</span>
 \t\t\t\t\t";
         // line 157
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "dateStart"), 'widget', array("attr" => array("class" => "form-control")));
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "dateStart"), 'widget', array("attr" => array("class" => "form-control date test")));
         echo "
 \t\t\t\t</div>
 \t\t\t</div>\t\t\t\t\t\t\t\t\t
@@ -259,14 +259,12 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t</div>
 \t\t\t</div>\t\t\t\t\t
 \t\t\t<div class=\"col-xs-6\">
-\t\t\t\t<div class=\"input-group\" id=\"dateFin\">
+\t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Date de fin</span>
-\t\t\t\t\t<div class=\"datepicker\">
 \t\t\t\t\t";
-        // line 173
-        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "dateEnd"), 'widget', array("attr" => array("class" => "form-control")));
+        // line 172
+        echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "dateEnd"), 'widget', array("attr" => array("class" => "form-control date test")));
         echo "
-\t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</div>
@@ -276,7 +274,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Client doit</span>
 \t\t\t\t\t";
-        // line 183
+        // line 181
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "clientDoit"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -285,7 +283,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Incident de paiement</span>
 \t\t\t\t\t";
-        // line 189
+        // line 187
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "incidentPaiement"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -297,19 +295,19 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Droit entrée</span>
 \t\t\t\t\t";
-        // line 198
+        // line 196
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "droitEntree"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
 \t\t\t</div>\t
 \t\t\t<div class=\"col-xs-6\">
-<div class=\"panel panel-info\">
+<div class=\"panel panel-info\" id=\"supp\">
       <div class=\"panel-heading\">
         <h3 class=\"panel-title\">Option</h3>
       </div>
       <div class=\"panel-body\">
         ";
-        // line 207
+        // line 205
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getContext($context, "form"), "supp"), 'widget', array("attr" => array("class" => "checkBox")));
         echo "
       </div>
@@ -330,7 +328,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Nom du bénéficiare</span>
 \t\t\t\t\t";
-        // line 225
+        // line 223
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "nomBeneficiare"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -339,7 +337,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Titulaire</span>
 \t\t\t\t\t";
-        // line 231
+        // line 229
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "titulaire"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -351,7 +349,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Nom de la banque</span>
 \t\t\t\t\t";
-        // line 240
+        // line 238
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "nom"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -360,7 +358,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Adresse</span>
 \t\t\t\t\t";
-        // line 246
+        // line 244
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "adresse"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -372,7 +370,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Ville</span>
 \t\t\t\t\t";
-        // line 255
+        // line 253
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "ville"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -381,7 +379,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">Code postal</span>
 \t\t\t\t\t";
-        // line 261
+        // line 259
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "cp"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -393,7 +391,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">IBAN</span>
 \t\t\t\t\t";
-        // line 270
+        // line 268
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "iban"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -402,7 +400,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\t<div class=\"input-group\">
 \t\t\t\t\t<span class=\"input-group-addon\">BIC</span>
 \t\t\t\t\t";
-        // line 276
+        // line 274
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getContext($context, "form"), "banque"), "bic"), 'widget', array("attr" => array("class" => "form-control")));
         echo "
 \t\t\t\t</div>
@@ -411,7 +409,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t</div>
 </div>\t\t\t 
 ";
-        // line 282
+        // line 280
         echo $this->env->getExtension('form')->renderer->searchAndRenderBlock($this->getContext($context, "form"), 'rest');
         echo "
 <div class=\"form-group\">
@@ -423,7 +421,7 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 </form>
 
 ";
-        // line 293
+        // line 291
         echo "<script type=\"text/javascript\">
     // keep track of how many email fields have been rendered
 \tjQuery(document).ready(function() {
@@ -442,10 +440,12 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 \t\t\t\$('#infoAbo').show();
 \t\t\t\$('#infoAbo :input').attr('required', 'required');
 \t\t\t\$('#infoBanque :input').attr('required', 'required');
+\t\t\t\$('#supp :input').removeAttr('required');
+\t\t\t
 \t\t  }
 \t\t});
 \t\t
-\t\tjQuery('.datepicker').datepicker();
+
 \t})
 
 \t\t
@@ -468,6 +468,6 @@ class __TwigTemplate_28ee58cf865c347778cdfb40c495d474281906ac086ce189fcfc5be0192
 
     public function getDebugInfo()
     {
-        return array (  427 => 293,  415 => 282,  406 => 276,  397 => 270,  385 => 261,  376 => 255,  364 => 246,  355 => 240,  343 => 231,  334 => 225,  313 => 207,  301 => 198,  289 => 189,  280 => 183,  267 => 173,  257 => 166,  245 => 157,  236 => 151,  216 => 134,  207 => 128,  188 => 112,  179 => 106,  167 => 97,  156 => 89,  145 => 81,  133 => 72,  122 => 64,  108 => 53,  99 => 47,  90 => 41,  78 => 32,  67 => 24,  58 => 18,  44 => 7,  39 => 6,  32 => 3,  29 => 2,);
+        return array (  425 => 291,  413 => 280,  404 => 274,  395 => 268,  383 => 259,  374 => 253,  362 => 244,  353 => 238,  341 => 229,  332 => 223,  311 => 205,  299 => 196,  287 => 187,  278 => 181,  266 => 172,  257 => 166,  245 => 157,  236 => 151,  216 => 134,  207 => 128,  188 => 112,  179 => 106,  167 => 97,  156 => 89,  145 => 81,  133 => 72,  122 => 64,  108 => 53,  99 => 47,  90 => 41,  78 => 32,  67 => 24,  58 => 18,  44 => 7,  39 => 6,  32 => 3,  29 => 2,);
     }
 }

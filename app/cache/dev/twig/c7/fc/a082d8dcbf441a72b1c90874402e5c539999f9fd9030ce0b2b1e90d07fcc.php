@@ -41,12 +41,12 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 \t";
         // line 14
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 27
+        // line 28
         echo "\t
 \t";
-        // line 28
+        // line 29
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 33
+        // line 37
         echo "\t
 
   </head>
@@ -68,12 +68,12 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
           <ul class=\"nav navbar-nav\">
 \t\t  <li>
 \t\t\t<img src=\"";
-        // line 53
+        // line 57
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/images/tonicmanager.png"), "html", null, true);
         echo "\" style=\"width:90px;\">
 \t\t  </li>
             <li><a href=\"";
-        // line 55
+        // line 59
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_homepage");
         echo "\"><span class=\"icon-home\" ></span> Accueil</a></li>
 \t\t\t
@@ -81,18 +81,18 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
               <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\"><span class=\"icon-copy\"></span> Client <b class=\"caret\"></b></a>
               <ul class=\"dropdown-menu\">
                 <li><a href=\"";
-        // line 60
+        // line 64
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_ajoutContrat");
         echo "\">Nouveau clients</a></li>
                 <li><a href=\"";
-        // line 61
+        // line 65
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_listeClient");
         echo "\">Liste des clients</a></li>
                 <li><a href=\"#\">Rechercher un client</a></li>
               </ul>
             </li>
 \t\t\t<li><a href=\"";
-        // line 65
+        // line 69
         echo $this->env->getExtension('routing')->getPath("tonicmanagerAppBundle_admin");
         echo "\"><span class=\"glyphicon glyphicon-cog\" ></span> Admin</a></li>\t\t\t
           </ul>
@@ -100,21 +100,21 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
             <input type=\"text\" class=\"form-control\" placeholder=\"Search...\">
           </form>
 \t\t\t";
-        // line 70
+        // line 74
         $this->displayBlock('printDevis', $context, $blocks);
-        // line 73
+        // line 77
         echo "        </div><!--/.nav-collapse -->
       </div>
 </div>
 \t
 <!-- Main jumbotron for a primary marketing message or call to action -->
 \t  \t";
-        // line 78
+        // line 82
         $this->displayBlock('titleAction', $context, $blocks);
-        // line 80
+        // line 84
         echo "\t\t";
         $this->displayBlock('body', $context, $blocks);
-        // line 82
+        // line 86
         echo "\t
 \t
 \t<div id=\"footer\">
@@ -134,28 +134,14 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 
 
 \t
-\t
-\t<script type=\"text/javascript\" src=\"";
-        // line 102
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap.min.js"), "html", null, true);
-        echo "\" ></script>\t\t\t\t
-\t<script type=\"text/javascript\" src=\"";
-        // line 103
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap-datepicker.js"), "html", null, true);
-        echo "\" charset=\"UTF-8\"></script>
-\t<script type=\"text/javascript\" src=\"";
-        // line 104
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap-datetimepicker.fr.js"), "html", null, true);
-        echo "\" charset=\"UTF-8\"></script>
+
 
 \t
 \t
 \t";
-        // line 108
+        // line 109
         echo "\t
 \t";
-        // line 110
-        echo "\t";
         // line 111
         echo "\t";
         // line 112
@@ -163,11 +149,13 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
         // line 113
         echo "\t";
         // line 114
+        echo "\t";
+        // line 115
         echo "\t
 \t
 \t
 \t<script type=\"text/javascript\" src=\"";
-        // line 117
+        // line 118
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/jquery.tablesorter.min.js"), "html", null, true);
         echo "\"></script>\t\t
     <script language=\"JavaScript\">
@@ -196,6 +184,20 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
             f.window.close();
             return true;
         }
+\t\t
+
+\t\$('.test').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+\t\tautoclose: 1,
+\t\ttodayHighlight: 1,
+\t\tstartView: 2,
+\t\tminView: 2,
+\t\tforceParse: 0
+    });
+
+\t
 \t</script>\t
 \t
   </body>
@@ -231,49 +233,68 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
         // line 20
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/css/theme.css"), "html", null, true);
         echo "\" rel=\"stylesheet\">\t
+\t<link href=\"";
+        // line 21
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/bootstrap/css/bootstrap-datetimepicker.min.css"), "html", null, true);
+        echo "\" rel=\"stylesheet\" media=\"screen\">
 \t
-\t";
-        // line 22
-        echo "\t\t
 \t";
         // line 23
         echo "\t\t
 \t";
         // line 24
         echo "\t\t
+\t";
+        // line 25
+        echo "\t\t
 \t\t\t\t
 \t";
     }
 
-    // line 28
+    // line 29
     public function block_javascripts($context, array $blocks = array())
     {
-        // line 29
+        // line 30
         echo "
 \t
-\t<script src=\"https://code.jquery.com/jquery-1.10.2.min.js\"></script>
+\t<script type=\"text/javascript\" src=\"";
+        // line 32
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/jquery/jquery-1.8.3.min.js"), "html", null, true);
+        echo "\" charset=\"UTF-8\"></script>\t\t\t\t\t\t\t\t\t
+\t<script type=\"text/javascript\" src=\"";
+        // line 33
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/js/bootstrap.min.js"), "html", null, true);
+        echo "\" ></script>\t\t\t\t
+\t<script type=\"text/javascript\" src=\"";
+        // line 34
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/jquery/bootstrap-datetimepicker.js"), "html", null, true);
+        echo "\" charset=\"UTF-8\"></script>\t\t\t\t\t
+\t<script type=\"text/javascript\" src=\"";
+        // line 35
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("dist/jquery/bootstrap-datetimepicker.fr.js"), "html", null, true);
+        echo "\" charset=\"UTF-8\"></script>
 \t";
     }
 
-    // line 70
+    // line 74
     public function block_printDevis($context, array $blocks = array())
     {
-        // line 71
+        // line 75
         echo "\t\t
 \t\t\t";
     }
 
-    // line 78
+    // line 82
     public function block_titleAction($context, array $blocks = array())
     {
-        // line 79
+        // line 83
         echo "\t\t";
     }
 
-    // line 80
+    // line 84
     public function block_body($context, array $blocks = array())
     {
-        // line 81
+        // line 85
         echo "\t\t";
     }
 
@@ -289,6 +310,6 @@ class __TwigTemplate_c7fca082d8dcbf441a72b1c90874402e5c539999f9fd9030ce0b2b1e90d
 
     public function getDebugInfo()
     {
-        return array (  277 => 81,  274 => 80,  270 => 79,  267 => 78,  262 => 71,  259 => 70,  252 => 29,  249 => 28,  243 => 24,  240 => 23,  237 => 22,  232 => 20,  228 => 19,  224 => 18,  220 => 17,  216 => 15,  213 => 14,  207 => 12,  171 => 117,  166 => 114,  164 => 113,  162 => 112,  160 => 111,  158 => 110,  155 => 108,  148 => 104,  144 => 103,  140 => 102,  118 => 82,  115 => 80,  113 => 78,  106 => 73,  104 => 70,  96 => 65,  89 => 61,  85 => 60,  77 => 55,  72 => 53,  50 => 33,  48 => 28,  45 => 27,  43 => 14,  38 => 12,  25 => 1,);
+        return array (  298 => 85,  295 => 84,  291 => 83,  288 => 82,  283 => 75,  280 => 74,  274 => 35,  270 => 34,  266 => 33,  262 => 32,  258 => 30,  255 => 29,  249 => 25,  246 => 24,  243 => 23,  238 => 21,  234 => 20,  230 => 19,  226 => 18,  222 => 17,  218 => 15,  215 => 14,  209 => 12,  159 => 118,  154 => 115,  152 => 114,  150 => 113,  148 => 112,  146 => 111,  143 => 109,  118 => 86,  115 => 84,  113 => 82,  106 => 77,  104 => 74,  96 => 69,  89 => 65,  85 => 64,  77 => 59,  72 => 57,  50 => 37,  48 => 29,  45 => 28,  43 => 14,  38 => 12,  25 => 1,);
     }
 }

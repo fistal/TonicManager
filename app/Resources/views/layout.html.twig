@@ -18,6 +18,7 @@
 	<link href="{{ asset('dist/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" media="screen">	
 	<link href="{{ asset('dist/css/dashboard.css') }}" rel="stylesheet">
 	<link href="{{ asset('dist/css/theme.css') }}" rel="stylesheet">	
+	<link href="{{ asset('dist/bootstrap/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet" media="screen">
 	
 	{# <link href="{{ asset('dist/css/jquery-ui.css') }}" rel="stylesheet"> #}		
 	{# <link href="{{ asset('dist/css/docs.min.css') }}" rel="stylesheet">	#}		
@@ -28,7 +29,10 @@
 	{% block javascripts %}
 
 	
-	<script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="{{ asset('dist/jquery/jquery-1.8.3.min.js') }}" charset="UTF-8"></script>									
+	<script type="text/javascript" src="{{ asset('dist/js/bootstrap.min.js') }}" ></script>				
+	<script type="text/javascript" src="{{ asset('dist/jquery/bootstrap-datetimepicker.js') }}" charset="UTF-8"></script>					
+	<script type="text/javascript" src="{{ asset('dist/jquery/bootstrap-datetimepicker.fr.js') }}" charset="UTF-8"></script>
 	{% endblock %}
 	
 
@@ -98,10 +102,7 @@
 
 
 	
-	
-	<script type="text/javascript" src="{{ asset('dist/js/bootstrap.min.js') }}" ></script>				
-	<script type="text/javascript" src="{{ asset('dist/js/bootstrap-datepicker.js') }}" charset="UTF-8"></script>
-	<script type="text/javascript" src="{{ asset('dist/js/bootstrap-datetimepicker.fr.js') }}" charset="UTF-8"></script>
+
 
 	
 	
@@ -141,6 +142,20 @@
             f.window.close();
             return true;
         }
+		
+
+	$('.test').datetimepicker({
+        language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		minView: 2,
+		forceParse: 0
+    });
+
+	
 	</script>	
 	
   </body>
